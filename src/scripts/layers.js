@@ -43,7 +43,7 @@ var allLayers;
                     "options": {
                         "id": "water",
                         "opacity": 0.75,
-                        "minScale": 144448,
+                        "minScale": 4622325,
                         "visible": false
                     },
                     "wimOptions": {
@@ -76,7 +76,7 @@ var allLayers;
                         "type": "layer",
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
-                        "exclusiveGroupName": "test",
+                        "exclusiveGroupName": "distance",
                         "includeLegend" : true
                     }
                 },
@@ -93,7 +93,7 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
-                        "exclusiveGroupName": "test",
+                        "exclusiveGroupName": "distance",
                         "includeLegend" : true
                     }
                 },
@@ -110,7 +110,7 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
-                        "exclusiveGroupName": "test",
+                        "exclusiveGroupName": "distance",
                         "includeLegend" : true
                     }
                 },
@@ -127,7 +127,7 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
-                        "exclusiveGroupName": "test",
+                        "exclusiveGroupName": "distance",
                         "includeLegend" : true
                     }
                 }
@@ -145,13 +145,13 @@ var allLayers;
                         "id": "phragStands",
                         // opacity is false because this layer is just being used to show no reduction (nothing for this group of layers)
                         "opacity": 1,
+                        "minScale": 4622325,
                         "visible": false
                     },
                     "wimOptions":{
                         "type": "layer",
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
-                        "exclusiveGroupName": "habitat",
                         "includeLegend" : true
                     }
                 },
@@ -168,7 +168,6 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
-                        "exclusiveGroupName": "habitat",
                         "includeLegend" : true
                     }
                 }
