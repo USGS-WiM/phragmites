@@ -447,6 +447,19 @@ require([
                                         var tempLayer = app.map.getLayer(currentLayer[2].id);
                                         tempLayer.setVisibility(true);
                                         ////$('#' + camelize(currentLayer[1])).toggle();
+
+                                        
+
+
+                                        if (tempLayer.id == "lidar1m") {
+                                            $('#distanceLegend').html("Lidar-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />' + '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
+                                        } else if (tempLayer.id == "lidar50cm") {
+                                            $('#distanceLegend').html("Lidar-based 50cm reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />'+ '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
+                                        } else if (tempLayer.id == "1m") {
+                                            $('#distanceLegend').html("Contour-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />');
+                                        } else {
+                                            $('#distanceLegend').html(" ");
+                                        }
                                     }
                                     else if (currentLayer[1] == newLayer && $("#" + camelize(exclusiveGroupName + " Root")).find('i.glyphspan').hasClass('fa-square-o')) {
                                         console.log('group heading not checked');
@@ -674,6 +687,10 @@ require([
             $( document ).ready(function() {
                 $('#distanceRoot').css("display", "none")
                 $('#habitatRoot').css("display", "none")
+
+                /* $("#countour-Base1mReduction").click(function (){
+                    $('#lidarOne').append("Lidar-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
+                }); */
 
             });
 

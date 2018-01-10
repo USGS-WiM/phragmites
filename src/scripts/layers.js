@@ -77,10 +77,10 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "exclusiveGroupName": "distance",
-                        "includeLegend" : true
+                        "includeLegend" : false
                     }
                 },
-                "Countour-base 1m reduction": {
+                "Contour-base 1m reduction": {
                     "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
                     "visibleLayers": [27],
                     "options": {
@@ -94,7 +94,7 @@ var allLayers;
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "exclusiveGroupName": "distance",
-                        "includeLegend" : true
+                        "includeLegend" : false
                     }
                 },
                 "Lida-based 1m reduction": {
@@ -111,14 +111,14 @@ var allLayers;
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "exclusiveGroupName": "distance",
-                        "includeLegend" : true
+                        "includeLegend" : false
                     }
                 },
                 "Lida-based 50m reduction": {
                     "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
                     "visibleLayers": [7, 5],
                     "options": {
-                        "id": "lidar50m",
+                        "id": "lidar50cm",
                         "opacity": 1,
                         "visible": false
                     },
@@ -128,7 +128,7 @@ var allLayers;
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "exclusiveGroupName": "distance",
-                        "includeLegend" : true
+                        "includeLegend" : false
                     }
                 }
             }

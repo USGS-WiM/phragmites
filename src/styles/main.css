@@ -646,3 +646,21 @@ pre {
   box-sizing: border-box;
   padding: 12px 5px 5px 12px;
 }
+
+/* hiding esri service layer label in legend */
+.esriLegendLayerLabel {
+  display: none;
+}
+
+/* styling the legend images */
+.legendImage {
+  display: block;
+}
+
+#distanceLegend {
+  font-weight: bold; 
+}
+
+.customLegendBody {
+  padding: 0px 15px 15px 15px;
+}
