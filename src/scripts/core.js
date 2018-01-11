@@ -523,8 +523,17 @@ require([
                         //layer toggle
                         if (layer.visible) {
                             layer.setVisibility(false);
+                            
+                            if (layer.id == "water")
+                            $('#waterLegend').html("");
+
                         } else {
                             layer.setVisibility(true);
+
+                            if (layer.id == "water"){
+                                $('#waterLegend').html("Within streams, wetlands,"+ '<br>' + "and water bodies" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />');
+
+                            }
                         }
 
                         

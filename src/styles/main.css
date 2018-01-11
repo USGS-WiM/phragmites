@@ -652,6 +652,10 @@ pre {
   display: none;
 }
 
+#legendDiv_msg {
+  display: none;
+}
+
 /* styling the legend images */
 .legendImage {
   display: block;
@@ -659,6 +663,10 @@ pre {
 
 #distanceLegend {
   font-weight: bold; 
+}
+#waterLegend {
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .customLegendBody {

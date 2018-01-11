@@ -53,7 +53,7 @@ var allLayers;
                         "zoomScale": 144448,
                         "hasOpacitySlider": true,
                         "hasZoomto" : true,
-                        "includeLegend" : true
+                        "includeLegend" : false
                     }
                 }
             }
