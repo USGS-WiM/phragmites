@@ -672,3 +672,28 @@ pre {
 .customLegendBody {
   padding: 0px 15px 15px 15px;
 }
+
+/* Styles for overview map */
+
+.esriOverviewMap .ovwButton{
+ padding: 10px; 
+} /* pads minimize arrow */
+
+.ovwContainer {
+  width: 250px;
+  height: 150px;
+  display: block;
+  margin: 15px;
+  bottom: 0px;
+  right: 0px;
+  padding: 2px;
+  border: 1px solid #000;
+}
+
+/* .esriOverviewMap.ovwBR .ovwContainer {
+  
+} */
+
+.esriControlsBR {
+  display: none;
+} /* hides esri attribution for basemap in bottom right of screen */

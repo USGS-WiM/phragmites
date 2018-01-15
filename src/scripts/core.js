@@ -8,6 +8,7 @@ require([
     'esri/map',
     'esri/dijit/HomeButton',
     'esri/dijit/LocateButton',
+    'esri/dijit/OverviewMap',
     'esri/geometry/webMercatorUtils',
     'dojo/on',
     'dojo/domReady!'
@@ -15,6 +16,7 @@ require([
     Map,
     HomeButton,
     LocateButton,
+    OverviewMap,
     webMercatorUtils,
     on) {
         app.map = new Map('mapDiv', {
@@ -23,63 +25,43 @@ require([
             zoom: 7
         });
 
+        var overviewMapDijit = new OverviewMap({
+            map: app.map,
+            attachTo: "bottom-right",
+            width: 250,
+            height: 150,
+            baselayer: 'satellite',
+            visible: true
+          });
+          overviewMapDijit.startup();
+
         //basemap toggles
-        $(document).ready(function () {
-            $('#btnStreets').click(function () {
-                app.map.setBasemap('streets');
-                ga('send', {
-                    hitType: 'event',
-                    eventCategory: 'Basemap',
-                    eventAction: 'click',
-                    eventLabel: 'Streets'
-                });
-            });
-            $('#btnSatellite').click(function () {
-                app.map.setBasemap('satellite');
-                ga('send', {
-                    hitType: 'event',
-                    eventCategory: 'Basemap',
-                    eventAction: 'click',
-                    eventLabel: 'Satellite'
-                });
-            });
-            $('#btnTopo').click(function () {
-                app.map.setBasemap('topo');
-                ga('send', {
-                    hitType: 'event',
-                    eventCategory: 'Basemap',
-                    eventAction: 'click',
-                    eventLabel: 'Topo'
-                });
-            });
-            $('#btnTerrain').click(function () {
-                app.map.setBasemap('terrain');
-                ga('send', {
-                    hitType: 'event',
-                    eventCategory: 'Basemap',
-                    eventAction: 'click',
-                    eventLabel: 'Terrain'
-                });
-            });
-            $('#btnGray').click(function () {
-                app.map.setBasemap('gray');
-                ga('send', {
-                    hitType: 'event',
-                    eventCategory: 'Basemap',
-                    eventAction: 'click',
-                    eventLabel: 'Gray'
-                });
-            });
-            $('#btnNatGeo').click(function () {
-                app.map.setBasemap('national-geographic');
-                ga('send', {
-                    hitType: 'event',
-                    eventCategory: 'Basemap',
-                    eventAction: 'click',
-                    eventLabel: 'National Geographic'
-                });
-            });
+    $(document).ready(function () {
+        $('#btnStreets').click(function () {
+            app.map.setBasemap('streets');
+            gtag('event', 'click', { 'event_category': 'Basemap', 'event_label': 'basemap: streets' });
         });
+        $('#btnSatellite').click(function () {
+            app.map.setBasemap('satellite');
+            gtag('event', 'click', { 'event_category': 'Basemap', 'event_label': 'basemap: satellite' });
+        });
+        $('#btnTopo').click(function () {
+            app.map.setBasemap('topo');
+            gtag('event', 'click', { 'event_category': 'Basemap', 'event_label': 'basemap: topo' });
+        });
+        $('#btnTerrain').click(function () {
+            app.map.setBasemap('terrain');
+            gtag('event', 'click', { 'event_category': 'Basemap', 'event_label': 'basemap: terrain' });
+        });
+        $('#btnGray').click(function () {
+            app.map.setBasemap('gray');
+            gtag('event', 'click', { 'event_category': 'Basemap', 'event_label': 'basemap: gray' });
+        });
+        $('#btnNatGeo').click(function () {
+            app.map.setBasemap('national-geographic');
+            gtag('event', 'click', { 'event_category': 'Basemap', 'event_label': 'basemap: national-geographic' });
+        });
+    });
 
         //button for returning to initial extent
         var home = new HomeButton({
@@ -110,6 +92,10 @@ require([
             //about modal toggle
             $('#aboutButton').click(function () {
                 $('#aboutModal').modal('show');
+            });
+
+            $('#dataButton').click(function () {
+                $('#dataModal').modal('show');
             });
 
             $('#geosearchButton').click(function () {
@@ -453,12 +439,16 @@ require([
 
                                         if (tempLayer.id == "lidar1m") {
                                             $('#distanceLegend').html("Lidar-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />' + '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
+                                            gtag('event', 'click', {'event_category': 'Map Layer','event_label': 'Lidar-based 1m reduction'});
                                         } else if (tempLayer.id == "lidar50cm") {
                                             $('#distanceLegend').html("Lidar-based 50cm reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />'+ '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
+                                            gtag('event', 'click', {'event_category': 'Map Layer','event_label': 'Lidar-based 50cm reduction'});
                                         } else if (tempLayer.id == "1m") {
                                             $('#distanceLegend').html("Contour-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />');
+                                            gtag('event', 'click', {'event_category': 'Map Layer','event_label': 'Contour-based 1m reduction'});
                                         } else {
                                             $('#distanceLegend').html(" ");
+                                            gtag('event', 'click', {'event_category': 'Map Layer','event_label': 'No reduction'});
                                         }
                                     }
                                     else if (currentLayer[1] == newLayer && $("#" + camelize(exclusiveGroupName + " Root")).find('i.glyphspan').hasClass('fa-square-o')) {
