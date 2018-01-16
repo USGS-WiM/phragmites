@@ -17,10 +17,8 @@ var allLayers;
                     "options": {
                         "type": "layer",
                         "id": "studyArea",
-                        /* "visibleLayers": [0], */
                         "outFields": ["*"],
-                        /* "orderByFields": [ "network_centroids.P00940_Chloride DESC" ], */
-                        "visible": true
+                        "visible": false
                     },
                     "wimOptions": {
                         "type": "layer",
@@ -77,6 +75,7 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "exclusiveGroupName": "distance",
+                        "hasOpacitySlider": true,
                         "includeLegend" : false
                     }
                 },
@@ -152,6 +151,7 @@ var allLayers;
                         "type": "layer",
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
+                        "hasOpacitySlider": true,
                         "includeLegend" : true
                     }
                 },

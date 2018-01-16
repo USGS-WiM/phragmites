@@ -139,7 +139,7 @@ body {
     z-index:3;
     color: black;
     background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 1px 5px rgba(0,0,0,0.65);
     /*min-width: 150px;*/
     border-radius: 4px;
@@ -664,6 +664,7 @@ pre {
 #distanceLegend {
   font-weight: bold; 
 }
+
 #waterLegend {
   font-weight: bold;
   padding-bottom: 15px;
@@ -674,6 +675,12 @@ pre {
 }
 
 /* Styles for overview map */
+
+@media (max-width: 1000px) {
+  .esriOverviewMap {
+    display: none;
+  }
+}
 
 .esriOverviewMap .ovwButton{
  padding: 10px; 
@@ -687,13 +694,30 @@ pre {
   bottom: 0px;
   right: 0px;
   padding: 2px;
-  border: 1px solid #000;
+  border: 2px solid rgb(2, 5, 172);
 }
 
 /* .esriOverviewMap.ovwBR .ovwContainer {
-  
+ 
 } */
 
 .esriControlsBR {
   display: none;
 } /* hides esri attribution for basemap in bottom right of screen */
+
+.opacity {
+  padding-left: 10px;
+}
+
+.opacitySlider {
+  position: absolute;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  /*padding-bottom: 40px;*/
+  opacity: 0.8;
+  border: solid 1px white;
+  background-color: black;
+  z-index: 1000;
+  border-radius: 5px;
+}
