@@ -115,20 +115,20 @@ body {
 
 #mapDiv_zoom_slider {
   top: 80px !important;
-  left: 280px !important;
+  left: 13px !important;
 }
 
 #homeButton {
     position: absolute;
     top: 90px !important;
-    left: 272px !important;
+    left: 372px !important;
     z-index: 50 !important;
 }
 
 #locateButton {
     position: absolute;
     top: 130px !important;
-    left: 272px !important;
+    left: 372px !important;
     z-index: 50 !important;
 }
 
@@ -156,19 +156,19 @@ body {
     padding-left: 10px;
 }
 
-#homeButton {
+/* #homeButton {
     position: absolute;
-    top: 75px;
+    top: 372px;
     left: 5px;
     z-index: 50;
-}
+} */
 
-#locateButton {
+/* #locateButton {
     position: absolute;
-    top: 115px;
+    top: 372px;
     left: 5px;
     z-index: 50;
-}
+} */
 
 .latLngScale {
     position:absolute;
@@ -639,12 +639,14 @@ pre {
   font-weight: 700;
   letter-spacing: 1px;
   color: #6F758E;
-  font-size: 9pt;
+  font-size: 10pt;
   text-transform: capitalize;
   border-bottom: 1px solid #ECEEF3;
   display: block;
   box-sizing: border-box;
   padding: 12px 5px 5px 12px;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 /* hiding esri service layer label in legend */

@@ -18,7 +18,7 @@ var allLayers;
                         "type": "layer",
                         "id": "studyArea",
                         "outFields": ["*"],
-                        "visible": false
+                        "visible": true
                     },
                     "wimOptions": {
                         "type": "layer",
@@ -26,6 +26,7 @@ var allLayers;
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "includeLegend": true,
+                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
                     }
                 }
             }
@@ -51,7 +52,8 @@ var allLayers;
                         "zoomScale": 144448,
                         "hasOpacitySlider": true,
                         "hasZoomto" : true,
-                        "includeLegend" : false
+                        "includeLegend" : false,
+                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
                     }
                 }
             }
@@ -67,7 +69,6 @@ var allLayers;
                     "options":{
                         "id": "none",
                         // opacity is false because this layer is just being used to show no reduction (nothing for this group of layers)
-                        "opacity": 0,
                         "visible": true
                     },
                     "wimOptions":{
@@ -75,23 +76,22 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "exclusiveGroupName": "distance",
-                        "hasOpacitySlider": true,
+                        /* "hasOpacitySlider": true, */
                         "includeLegend" : false
                     }
                 },
-                "Contour-base 1m reduction": {
+                "Contour-base 1m reduction": { 
                     "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
                     "visibleLayers": [27],
                     "options": {
                         "id": "1m",
-                        "opacity": 1,
                         "visible": false
                     },
                     "wimOptions": {
                         "type": "layer",
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
-                        "hasOpacitySlider": true,
+                        /* "hasOpacitySlider": true, */
                         "exclusiveGroupName": "distance",
                         "includeLegend" : false
                     }
@@ -101,14 +101,13 @@ var allLayers;
                     "visibleLayers": [9, 5],
                     "options": {
                         "id": "lidar1m",
-                        "opacity": 1,
                         "visible": false
                     },
                     "wimOptions": {
                         "type": "layer",
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
-                        "hasOpacitySlider": true,
+                        /* "hasOpacitySlider": true, */
                         "exclusiveGroupName": "distance",
                         "includeLegend" : false
                     }
@@ -118,14 +117,13 @@ var allLayers;
                     "visibleLayers": [7, 5],
                     "options": {
                         "id": "lidar50cm",
-                        "opacity": 1,
                         "visible": false
                     },
                     "wimOptions": {
                         "type": "layer",
                         "layerType": "agisDynamic",
-                        "includeInLayerList": true,
-                        "hasOpacitySlider": true,
+                        "includeInLayerList": true, 
+                        /* "hasOpacitySlider": true, */
                         "exclusiveGroupName": "distance",
                         "includeLegend" : false
                     }
@@ -152,7 +150,8 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
-                        "includeLegend" : true
+                        "includeLegend" : true,
+                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
                     }
                 },
                 "Phragmites habitat suitability": {
@@ -168,7 +167,8 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
-                        "includeLegend" : true
+                        "includeLegend" : true,
+                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
                     }
                 }
             }

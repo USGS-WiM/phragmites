@@ -104,7 +104,7 @@
                     <button id="btnTopo" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/topo.jpg"><br class="basemapThumb">Topo</button>
                     <button id="btnTerrain" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/terrain.jpg"><br class="basemapThumb">Terrain</button>
                     <button id="btnGray" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/gray.jpg"><br class="basemapThumb">Gray</button>
-                    <!-- <button id="btnDarkGray" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/dark-gray.png"><br class="basemapThumb">Dark Gray</button> -->
+                    <button id="btnDarkGray" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/dark-gray.png"><br class="basemapThumb">Dark Gray</button>
                     <button id="btnOSM" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/osm.jpg"><br class="basemapThumb">OSM</button>
                     <button id="btnNatGeo" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/natgeo.jpg"><br class="basemapThumb">NatGeo</button>
                     <!-- button id="btnNatlMap" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/national_map.jpg"><br class="basemapThumb">Nat'l Map</button> -->
@@ -283,40 +283,47 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                     <h3>Download the Data</h3>
+                    <br>
                     <p>Within streams, wetlands, and water bodies&nbsp;
                         <a target="_blank" href="./files/Data_archive_inorganic.xlsx">
                             <button type="button" class="btn btn-secondary dataButton btn-sm"><span class="fa fa-download"></span></button>
                         </a>
                         <br>
                     </p>
+                    <hr>
                     <p>Phragmites stand > 0.2 ha&nbsp;
                         <a target="_blank" href="data/phragmitesExtent.zip">
-                            <button type="button" class="btn btn-secondary dataButton btn-sm"><span class="fa fa-download"></span></button>
+                            <button type="button" class="btn btn-secondary dataButton btn-sm" id="dataDownload"><span class="fa fa-download"></span></button>
                         </a>
                         <br>
                     </p>
+                    <hr>
                     <p>Phragmites habitat suitability&nbsp;
                         <a target="_blank" href="./files/Data_archive_inorganic.xlsx">
-                            <button type="button" class="btn btn-secondary dataButton btn-sm"><span class="fa fa-download"></span></button>
+                            <button type="button" class="btn btn-secondary dataButton btn-sm" id="dataDownload"><span class="fa fa-download"></span></button>
                         </a>
                         <br>
                     </p>
+                    <hr>
                     <p>Contour-based 1m reduction&nbsp;
                         <a target="_blank" href="./files/Data_archive_inorganic.xlsx">
-                            <button type="button" class="btn btn-secondary dataButton btn-sm"><span class="fa fa-download"></span></button>
+                            <button type="button" class="btn btn-secondary dataButton btn-sm" id="dataDownload"><span class="fa fa-download"></span></button>
                         </a>
                         <br>
                     </p>
+                    <hr>
                     <p>Lidar-based 1m reduction&nbsp;
                         <a target="_blank" href="./files/Data_archive_inorganic.xlsx">
-                            <button type="button" class="btn btn-secondary dataButton btn-sm"><span class="fa fa-download"></span></button>
+                            <button type="button" class="btn btn-secondary dataButton btn-sm" id="dataDownload"><span class="fa fa-download"></span></button>
                         </a>
                         <br>
                     </p>
+                    <hr>
                     <p>Lidar-based 50cm reduction&nbsp;
                         <a target="_blank" href="./files/Data_archive_inorganic.xlsx">
-                            <button type="button" class="btn btn-secondary dataButton btn-sm"><span class="fa fa-download"></span></button>
+                            <button type="button" class="btn btn-secondary dataButton btn-sm" id="dataDownload"><span class="fa fa-download"></span></button>
                         </a>
                         <br>
                     </p>
@@ -725,7 +732,7 @@
             <div id="mapDiv">
 
                 
-                    <div id="legendElement" class="panel panel-default legendClass" style="width: 15%">
+                    <div id="legendElement" class="panel panel-default legendClass" style="width: 12%">
                         <div id="legendHeading" class=" legendHeading" role="tab">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" style="text-decoration: none" href="#legendCollapse" aria-expanded="true" aria-controls="collapseOne">
@@ -743,20 +750,27 @@
                             </div>
                         </div>
                     </div>
-                    
+                     
 
             </div>
 
             
                 <div id="homeButton"></div>
                 <div id="locateButton"></div>
-
+                
                 <div id="latLngScale" class="latLngScale">
-                    <span class="hover-content"> <b>Map scale </b></span> 1:
-                    <span id="scale"></span> <br>
-                    <span class="hover-content"><b>Latitude</b></span>
+                    <span class="hover-content">
+                        <b>Map scale </b>
+                    </span> 1:
+                    <span id="scale"></span>
+                    <br>
+                    <span class="hover-content">
+                        <b>Latitude</b>
+                    </span>
                     <span id="latitude">y</span> |
-                    <span class="hover-content"> <b>Longitude</b></span>
+                    <span class="hover-content">
+                        <b>Longitude</b>
+                    </span>
                     <span id="longitude">x</span>
                     <span id="mapCenterLabel" class="hover-content"> (center)</span>
                 </div>
