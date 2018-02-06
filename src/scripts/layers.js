@@ -13,7 +13,7 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "Study Area": {
-                    "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer/2",
+                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/2",
                     "options": {
                         "type": "layer",
                         "id": "studyArea",
@@ -37,7 +37,7 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "Within streams, wetlands, and water bodies" : {
-                    "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
+                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [28],
                     "options": {
                         "id": "water",
@@ -64,11 +64,12 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "No Reduction":{
-                    "url" : "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
+                    "url" : "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [23],
                     "options":{
                         "id": "none",
-                        // opacity is false because this layer is just being used to show no reduction (nothing for this group of layers)
+                        "opacity": 0,
+                        // opacity is 0 because this layer is just being used to show no reduction (nothing for this group of layers)
                         "visible": true
                     },
                     "wimOptions":{
@@ -81,7 +82,7 @@ var allLayers;
                     }
                 },
                 "Contour-base 1m reduction": { 
-                    "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
+                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [27],
                     "options": {
                         "id": "1m",
@@ -97,7 +98,7 @@ var allLayers;
                     }
                 },
                 "Lida-based 1m reduction": {
-                    "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
+                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [9, 5],
                     "options": {
                         "id": "lidar1m",
@@ -113,7 +114,7 @@ var allLayers;
                     }
                 },
                 "Lida-based 50m reduction": {
-                    "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
+                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [7, 5],
                     "options": {
                         "id": "lidar50cm",
@@ -136,7 +137,7 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "Phragmites stands > 0.2 ha":{
-                    "url" : "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
+                    "url" : "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [1],
                     "options":{
                         "id": "phragStands",
@@ -155,7 +156,7 @@ var allLayers;
                     }
                 },
                 "Phragmites habitat suitability": {
-                    "url": "http://igskmncwfsmap.er.usgs.gov:6080/arcgis/rest/services/GLRI68_Phragmites/MapServer",
+                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [29],
                     "options": {
                         "id": "habitatSuit",

@@ -450,13 +450,13 @@ require([
 
 
                                         if (tempLayer.id == "lidar1m") {
-                                            $('#distanceLegend').html("Lidar-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />' + '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
+                                            $('#distanceLegend').html("Lidar-based 1m reduction" + '<br>' + '<small> Distance (km) to Phragmites </small>' + '<img class="legendImage" src="images/contour_1m_legend.jpg" />' + '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
                                             gtag('event', 'click', {'event_category': 'Map Layer','event_label': 'Lidar-based 1m reduction'});
                                         } else if (tempLayer.id == "lidar50cm") {
-                                            $('#distanceLegend').html("Lidar-based 50cm reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />'+ '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
+                                            $('#distanceLegend').html("Lidar-based 50cm reduction" + '<br>' + '<small> Distance (km) to Phragmites </small>' + '<img class="legendImage" src="images/contour_1m_legend.jpg" />'+ '<br>' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
                                             gtag('event', 'click', {'event_category': 'Map Layer','event_label': 'Lidar-based 50cm reduction'});
                                         } else if (tempLayer.id == "1m") {
-                                            $('#distanceLegend').html("Contour-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />');
+                                            $('#distanceLegend').html("Contour-based 1m reduction" + '<br>' + '<small> Distance (km) to Phragmites </small>' + '<img class="legendImage" src="images/contour_1m_legend.jpg" />');
                                             gtag('event', 'click', {'event_category': 'Map Layer','event_label': 'Contour-based 1m reduction'});
                                         } else {
                                             $('#distanceLegend').html(" ");
