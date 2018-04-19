@@ -1,0 +1,44 @@
+[
+  {
+    "name": "phragmites",
+    "organization": "U.S. Geological Survey",
+    "description": "",
+    "version": "v0.0.0",
+    "status": ["Development"],
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain",
+          "URL": "https://github.com/usgs/phragmites/blob/master/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://wim.usgs.gov",
+    "downloadURL": "https://github.com/USGS-WiM/phragmites/archive/master.zip",
+    "disclaimerURL": "https://github.com/USGS-WiM/phragmites/blob/master/DISCLAIMER.md",
+    "repositoryUrl": "https://github.com/USGS-WiM/phragmites",
+    "vcs": "git",
+
+    "laborHours": null,
+
+    "tags": [
+      "phragmites"
+    ],
+
+    "languages": [
+      "javascript"
+    ],
+
+    "contact": {
+      "name": "Lauren Privette",
+      "email": "lprivette@usgs.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2018-04-19"
+    }
+  }
+]
