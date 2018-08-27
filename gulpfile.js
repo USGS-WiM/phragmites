@@ -16,6 +16,12 @@ var gulp = require('gulp'),
     stylish = require('jshint-stylish'),
     less = require('gulp-less');
 
+
+// Browser sync
+var browserSync = require("browser-sync").create();
+var reload = browserSync.reload;
+
+
 //get current app version
 var version = require('./package.json').version;
 
@@ -214,3 +220,35 @@ gulp.task('watch', ['less', 'connect', 'serve'], function () {
     
 
 });
+
+
+
+
+// Browsersync
+// alternative to regular server
+
+gulp.task('bs', function(){
+
+    browserSync.init({
+        server: "./"
+    });  
+ 
+    gulp.watch("./src/**/*.less", ['sync-styles']);
+ 
+    gulp.watch("./src/**/*.html").on("change", reload);
+    gulp.watch("./src/**/*.js").on("change", reload);
+ 
+     
+ });
+ 
+ // Compile LESS to CSS then inject without reload
+ // Compile LESS to CSS then inject without reload
+ // Compile LESS to CSS then inject without reload
+ gulp.task('sync-styles', function(){
+ 
+     gulp.src('./src/styles/main.less')
+         .pipe(less())
+         .pipe(gulp.dest('./src/styles/'))
+         .pipe(browserSync.stream());
+ 
+ });

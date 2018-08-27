@@ -74,37 +74,40 @@
 
 <body>
     <div id="top-menu">
-        <div class="title">
-            <a class='top-menu-brand' href="https://www.usgs.gov"><img id="logo" src="images/usgs_logo.png"></a>
-            <span class="app-name">phragmites</span> <span class="app-name-mobile">phragmites</span>
-        </div>
+
         <div id="mobile-main-menu">
             <span class="glyphicon glyphicon-menu-hamburger"></span>
         </div>
 
+                
+        <div class="title">
+            <a class='top-menu-brand' href="https://www.usgs.gov"><img id="logo" src="images/usgs_logo.png"></a>
+            <span class="app-name">phragmites</span> <span class="app-name-mobile">phragmites</span>
+        </div>
+
         <button id="geosearchButton" type="button" class="btn btn-default top-menu-btn pull-right" >
-            <i class="glyphicon glyphicon-search"></i><span class="hidden-xs">&nbsp;&nbsp;Find Location</span>
+            <i class="glyphicon glyphicon-search"></i><span class="hidden-xs">Find Location</span>
         </button>
 
         <button id="dataButton" type="button" class="btn btn-default top-menu-btn pull-right" >
-            <i class="glyphicon glyphicon-save"></i><span class="hidden-xs">&nbsp;&nbsp;Data</span>
+            <i class="glyphicon glyphicon-save"></i><span class="hidden-xs">Data</span>
         </button>
         
             <button id="faqButton" class="btn btn-default top-menu-btn pull-right">
-            <i class="glyphicon glyphicon-book"></i><span class="hidden-xs">&nbsp;&nbsp;FAQ</span>
+            <i class="glyphicon glyphicon-question-sign"></i><span class="hidden-xs">FAQ</span>
         </button>
 
             <button id="userGuideButton" class="btn btn-default top-menu-btn pull-right">
-            <i class="glyphicon glyphicon-book"></i><span class="hidden-xs">&nbsp;&nbsp;User Guide</span>
+            <i class="glyphicon glyphicon-book"></i><span class="hidden-xs">User Guide</span>
         </button>
             
                 <button id="aboutButton" class="btn btn-default top-menu-btn pull-right">
-            <i class="glyphicon glyphicon-info-sign"></i><span class="hidden-xs">&nbsp;&nbsp;About</span>
+            <i class="glyphicon glyphicon-info-sign"></i><span class="hidden-xs">About</span>
         </button>
 
     </div>
 
-    <div id="sidebar" class="col-xs-11 col-sm-10 col-md-3 col-lg-2 sidebar sidebar-left sidebar-animate sidebar-md-show no-col-padding" style="top: 7.5%; padding-left: 0px; padding-right: 0px;">
+    <div id="sidebar" class="col-xs-11 col-sm-10 col-md-3 col-lg-2 sidebar sidebar-left sidebar-animate sidebar-md-show no-col-padding">
         <div class="panel panel-default wim-sidebar-panel">
             <div class="panel-heading" id="basemapsHeader">
                 <h4 class="panel-title">
@@ -191,7 +194,6 @@
                     </ul>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="aboutTabPane">
-                            </br>
                             <p>The GLRI Phragmites Decision Support Tool (DST) Mapper is intended to provide resource managers with information to strategically develop effective Phragmites control and invasion prevention programs in the Great Lakes coastal zone (10 km inland from the shoreline). The Mapper consists of three integrated components:</p>
                             <ol>
                                 <li>A distribution map of large (> 0.2 ha) stands of existing Phragmites.</li>
@@ -224,6 +226,13 @@
                             <p>This cooperative research was made possible by the Great Lakes Restoration Initiative.</p>
                         </div>
                     </div>
+
+                    <!-- Close Modal -->
+                    <div class="modal-footer-buttons">
+                        <button id="btnDismiss" class="btn btn-default btn-fixed" data-dismiss="modal">Close</button>
+                    </div>
+
+
                 </div>
                 <!--<div class="modal-footer">
                 </div>-->
@@ -238,17 +247,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Find Location</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <div id="geosearch" align="center"></div>
-                        <br>
-                        <div align="center">
-                            <p>Search provided by <a href="https://txpub.usgs.gov/dss/search_api/2.0/" target="_blank">USGS Search Javascript API</a></p>
-                        </div>
-                        <br>
+                        <p class="search-provider">Search provided by <a href="https://txpub.usgs.gov/dss/search_api/2.0/" target="_blank">USGS Search Javascript API</a></p>
                         <div>
                             <h5 style="text-align: center">Supported search strings include: </h5>
                             <p style="text-align: center">
@@ -260,7 +265,7 @@
                             </p>
                         </div>
                     </div>
-                    <form id="geosearch-form" class="form-inline">
+                    <form id="geosearch-form" class="form-inline modal-footer-buttons">
                         <button id="btnDismiss" type="submit" class="btn btn-default btn-fixed" data-dismiss="modal">Dismiss</button>
                     </form>
                 </div>
@@ -285,9 +290,10 @@
                     <p>Please use this application in a modern, standards-compliant browser, such as Google Chrome, Microsoft
                         Edge, or Mozilla Firefox.</p>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Continue Anyway (Not recommended)</button>
+
+                    <div class="modal-footer-buttons">
+                        <button id="btnDismiss" class="btn btn-default btn-fixed" data-dismiss="modal">Continue Anyway (Not recommended)</button>
+                    </div>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -301,50 +307,33 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3>Download the Data</h3>
-                    <br>
-                    <p style="text-align:center;">
-                        <a target="_blank" href="data/inldcrdrs.zip">
-                            <button type="button" class="btn btn-secondary dataButton btn-md">Within streams, wetlands, and water bodies&nbsp;&nbsp;<span class="fa fa-download"></span></button>
-                        </a>
-                        <br>
-                    </p>
-                    <hr>
-                    <p style="text-align:center;">
-                        <a target="_blank" href="data/PhragmitesExtent.zip">
-                            <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Phragmites stand > 0.2 ha&nbsp;&nbsp;<span class="fa fa-download"></span></button>
-                        </a>
-                        <br>
-                    </p>
-                    <hr>
-                    <p style="text-align:center;">
-                        <a target="_blank" href="data/habsuit_32flt.zip">
-                            <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Phragmites habitat suitability&nbsp;&nbsp;<span class="fa fa-download"></span></button>
-                        </a>
-                        <br>
-                    </p>
-                    <hr>
-                    <p style="text-align:center;">
-                        <a target="_blank" href="data/rllcntr1m.zip">
-                            <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Contour-based 1m reduction&nbsp;&nbsp;<span class="fa fa-download"></span></button>
-                        </a>
-                        <br>
-                    </p>
-                    <hr>
-                    <p style="text-align:center;">
-                        <a target="_blank" href="data/rlllidar1m.zip">
-                            <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Lidar-based 1m reduction&nbsp;&nbsp;<span class="fa fa-download"></span></button>
-                        </a>
-                        <br>
-                    </p>
-                    <hr>
-                    <p style="text-align:center;">
-                        <a target="_blank" href="data/rlllidar50cm.zip">
-                            <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Lidar-based 50cm reduction&nbsp;&nbsp;<span class="fa fa-download"></span></button>
-                        </a>
-                        <br>
-                    </p>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Download the Data</h4>
+                </div>
+                <div class="modal-body" id="dataModalButtons">
+                    <a target="_blank" href="data/inldcrdrs.zip">
+                        <button type="button" class="btn btn-secondary dataButton btn-md">Within streams, wetlands, and water bodies&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                    </a>
+                    <a target="_blank" href="data/PhragmitesExtent.zip">
+                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Phragmites stand > 0.2 ha&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                    </a>
+                    <a target="_blank" href="data/habsuit_32flt.zip">
+                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Phragmites habitat suitability&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                    </a>
+                    <a target="_blank" href="data/rllcntr1m.zip">
+                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Contour-based 1m reduction&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                    </a>
+                    <a target="_blank" href="data/rlllidar1m.zip">
+                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Lidar-based 1m reduction&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                    </a>
+                    <a target="_blank" href="data/rlllidar50cm.zip">
+                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Lidar-based 50cm reduction&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                    </a>
+
+                    <!-- Close Modal -->
+                    <div class="modal-footer-buttons">
+                        <button id="btnDismiss" class="btn btn-default btn-fixed" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -461,12 +450,14 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Close Modal -->
+                        <div class="modal-footer-buttons">
+                            <button id="btnDismiss" class="btn btn-default btn-fixed" data-dismiss="modal">Close</button>
+                        </div>
+
+
                     </div>
-
-                    <form id="closeModalButton" id="disclaimer-form" class="form-inline" style="text-align:center;">
-                        <button id="enterMapper" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                    </form>
-
                 </div>
                 <!-- /.modal-content -->
             </div>
@@ -481,7 +472,7 @@
                         <button class="close" type="button" data-dismiss="modal" aria-hidden="true" style="color:gray;">&times;</button>
                         <h4 class="modal-title">Frequently Asked Questions</h4>
                     </div>
-                    <div class="faq-modal-body">
+                    <div class="faq-modal-body modal-body">
                         <h4 style="margin-bottom: 15px; font-weight: 600;">Study scope</h4>
                         <div class="faq-header" id="faq1header">1. What is Phragmites? Why is it a problem?
                             <div id="angle1" style="display: -webkit-inline-box;"><i class="fa fa-angle-right"></i></div>
@@ -737,6 +728,13 @@
                             directly abut the 'lidar unavailable' layer. The 1-m depth contour used as an alternative means to simulate a reduced 
                             lake-level corridor was not available for Lake Superior, Lake Michigan, or northern Lake Huron.
                         </div>
+
+                        <!-- Close Modal -->
+                        <div class="modal-footer-buttons">
+                            <button id="btnDismiss" class="btn btn-default btn-fixed" data-dismiss="modal">Close</button>
+                        </div>
+
+
                     </div>
                     <!-- /.modal-content -->
                 </div>

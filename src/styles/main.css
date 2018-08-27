@@ -1,255 +1,478 @@
-/*
-    ===========================
-    ===========================
-         Navigation Bar
-    ===========================
-    ===========================
-*/
-
-.top-menu-btn{
-    background-color: transparent;
-    border: none;
-    color: rgba(255,255,255,0.5);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 12pt;
-    margin: 18px auto;
+*:focus,
+*:active,
+*:hover {
+  outline: none !important;
 }
-.top-menu-btn:hover{
-    font-size: 12pt;
-    background-color: transparent;
-    border: none;
-    color: rgba(255,255,255,0.8)
-}
-.top-menu-btn:focus{
-    background-color: transparent;
-    border: none;
-    color: rgba(255,255,255,0.8);
-    font-size: 12pt;
-}
-.top-menu-btn:active{
-    color: rgba(255,255,255,1) !important;
-    background-color: transparent !important;
-    font-size: 12pt;
-    border: none;
-}
-
-.top-menu-brand {
-    padding: 18px 20px 15px;
-}
-
-.top-menu-brand{
-    padding-top: 18px;
-}
-
-.app-name{
-    position: relative;
-    top:-2px;
-    font-weight:300;
-}
-
-.app-name {
-  position: relative;
-  width: 100%;
-  line-height: 70px;
-  padding: 0 10px;
-  font-size: 23px;
-  color: #ffffff;
-  margin: 0;
-  z-index: 10;
-}
-
-.app-name-mobile{
-    position: relative;
-    top:-2px;
-    font-weight:300;
-}
-
-.app-name-mobile {
-  display: none;
-  position: relative;
-  width: 100%;
-  line-height: 70px;
-  padding: 0 10px;
-  font-size: 23px;
-  color: #ffffff;
-  margin: 0;
-  z-index: 10;
-
-}
-
-
-/*
-    ===========================
-    ===========================
-         Map
-    ===========================
-    ===========================
-*/
-html, body, #mapDiv {
-  padding: 0; 
-  margin: 0;
-  height: 100%;
-  font-family: 'Open Sans', sans-serif;
-}
-
-body {
-  padding-top: 70px;
-  padding-left:270px;
-}
-
-#mapDiv_zoom_slider {
-  top: 80px !important;
-  left: 13px !important;
-}
-
-#homeButton {
-    position: absolute;
-    top: 90px !important;
-    left: 372px !important;
-    z-index: 50 !important;
-}
-
-#locateButton {
-    position: absolute;
-    top: 130px !important;
-    left: 372px !important;
-    z-index: 50 !important;
-}
-
-.legendClass {
-    position:absolute;
-    top:80px !important;
-    right:5px;
-    z-index:3;
-    color: black;
-    background-color: rgb(255,255,255);
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-    /*min-width: 150px;*/
-    border-radius: 4px;
-}
-
-.legendHeading {
-    color: black;
-    background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255,0.8);
-    text-decoration: none !important;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-/* #homeButton {
-    position: absolute;
-    top: 372px;
-    left: 5px;
-    z-index: 50;
-} */
-
-/* #locateButton {
-    position: absolute;
-    top: 372px;
-    left: 5px;
-    z-index: 50;
-} */
-
-.latLngScale {
-    position:absolute;
-    padding:4px;
-    bottom:1.6em;
-    left: 280px !important;
-    /*width:250px*/
-    /*height:320px;*/
-    z-index:1;
-    color: black;
-    background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255,0.8);
-    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-    border-radius: 4px;
-}
-
-#logo {
-  height: 55px;
-  width: 160px;
-}
-
-/*
-    ===========================
-    ===========================
-         Top menu
-    ===========================
-    ===========================
-*/
-
 #top-menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #1d1d2b;
+  background-color: #10152C;
   z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 0;
+  z-index: 1000;
 }
-
-#top-menu > div:not(.logo) {
-  float: left;
-}
-
 #top-menu .title {
-  border-right: 1px solid #191924;
-  min-width: 270px;
-  /*cursor: pointer;*/
+  flex-grow: 4;
+  display: flex;
 }
-
-#mobile-main-menu {
+#top-menu .title .top-menu-brand {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+}
+#top-menu .title .top-menu-brand img {
+  max-height: 100%;
+  width: auto;
+  background-color: transparent;
+}
+#top-menu .title .app-name,
+#top-menu .title .app-name-mobile {
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: capitalize;
+  padding-left: 10px;
+}
+@media (max-width: 500px) {
+  #top-menu .title .app-name,
+  #top-menu .title .app-name-mobile {
+    font-size: 14px;
+  }
+}
+#top-menu .title .app-name-mobile {
   display: none;
+}
+#top-menu #mobile-main-menu {
+  display: none;
+}
+@media (max-width: 1020px) {
+  #top-menu #mobile-main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 0 8px 5px 15px;
+  }
+}
+#top-menu .top-menu-btn {
+  padding: 0 12px 2px 12px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.8;
+}
+@media (max-width: 500px) {
+  #top-menu .top-menu-btn {
+    padding: 0 10px 1px 10px;
+  }
+}
+#top-menu .top-menu-btn i,
+#top-menu .top-menu-btn span {
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+#top-menu .top-menu-btn span {
+  padding-left: 6px;
+}
+#top-menu .top-menu-btn:hover {
+  cursor: pointer !important;
+  opacity: 1;
+}
+#top-menu .top-menu-btn:hover span {
+  text-decoration: underline;
+}
+html,
+body,
+#mapDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  padding-top: 70px;
+  padding-left: 270px;
+}
+#mapDiv_zoom_slider {
+  top: 80px !important;
+  left: 17px !important;
+  border-radius: 3px !important;
+  box-shadow: 0 1px 5px rgba(10, 20, 50, 0.22) !important;
+  border: 0px solid black;
+}
+#mapDiv_zoom_slider .esriSimpleSliderIncrementButton,
+#mapDiv_zoom_slider .esriSimpleSliderDecrementButton {
+  background-color: #FFFFFF;
+  border-radius: 3px !important;
+}
+#mapDiv_zoom_slider .esriSimpleSliderIncrementButton span,
+#mapDiv_zoom_slider .esriSimpleSliderDecrementButton span {
+  color: #313B57;
+  font-size: 20px;
+}
+#mapDiv_zoom_slider .esriSimpleSliderIncrementButton:hover,
+#mapDiv_zoom_slider .esriSimpleSliderDecrementButton:hover {
   cursor: pointer;
 }
-
-#mobile-main-menu {
-  padding: 24px 15px;
-  color:white;
+#mapDiv_zoom_slider .esriSimpleSliderIncrementButton:hover span,
+#mapDiv_zoom_slider .esriSimpleSliderDecrementButton:hover span {
+  color: #1D5FEE;
 }
-
-/************* END TOP MENU **************/
-
-
-
- /*
+#homeButton,
+#locateButton {
+  position: fixed;
+  top: 95px !important;
+  left: 290px !important;
+  z-index: 50 !important;
+  background-color: #10152C !important;
+  border-radius: 3px !important;
+  box-shadow: 0 1px 5px rgba(10, 20, 50, 0.22) !important;
+}
+#homeButton:hover,
+#locateButton:hover {
+  background-color: #1D5FEE !important;
+}
+@media (max-width: 1020px) {
+  #homeButton,
+  #locateButton {
+    left: 8px !important;
+  }
+}
+#locateButton {
+  top: 130px !important;
+}
+#locateButton .zoomLocateButton:hover {
+  background-color: transparent !important;
+}
+#legendElement {
+  width: 180px !important;
+}
+@media (max-width: 1020px) {
+  #legendElement {
+    width: 140px !important;
+  }
+}
+#legendDiv {
+  font-size: 12px !important;
+}
+.legendClass {
+  position: absolute;
+  top: 75px !important;
+  right: 5px;
+  z-index: 3;
+  color: #10152C;
+  box-shadow: 0 1px 5px rgba(10, 20, 50, 0.22) !important;
+  border-radius: 3px !important;
+}
+.legendClass .legendHeading {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-decoration: none !important;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 2px !important;
+}
+.legendClass .legendHeading a {
+  color: #313B57;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 11px;
+  width: 120px;
+}
+.legendClass .legendHeading a .glyphicon {
+  margin-right: 3px;
+  position: relative;
+  top: 1px;
+}
+.legendClass .legendHeading:hover {
+  border-radius: 2px !important;
+}
+.legendClass .legendHeading:hover a {
+  border-radius: 2px !important;
+}
+.latLngScale {
+  position: absolute;
+  padding: 6px;
+  background-color: white !important;
+  box-shadow: 0 1px 5px rgba(10, 20, 50, 0.12) !important;
+  bottom: 1.6em;
+  left: 295px !important;
+  z-index: 1;
+  color: #313B57;
+  border-radius: 2px !important;
+  letter-spacing: 0 !important;
+  font-size: 11px !important;
+  border: none !important;
+}
+@media (max-width: 1020px) {
+  .latLngScale {
+    left: 15px !important;
+  }
+}
+#logo {
+  height: 55px;
+  width: 160px;
+}
+#sidebar {
+  width: 280px;
+  height: 100%;
+  padding: 0;
+  padding-top: 55px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  max-height: 100%;
+}
+@media (max-width: 1020px) {
+  #sidebar {
+    left: -100%;
+    position: absolute;
+    z-index: 500;
+    transition: 0.3s ease;
+    background-color: white !important;
+  }
+}
+#sidebar .footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+#sidebar .footer-links .identification {
+  width: 100%;
+  padding: 0 0 3px 0;
+  opacity: 1;
+}
+#sidebar .footer-links .identification a {
+  color: #A0AFCD;
+  letter-spacing: 0.2;
+}
+#sidebar .footer-links .identification a:hover {
+  cursor: pointer;
+  color: #313B57;
+}
+#sidebar .footer-links a {
+  font-size: 11px;
+  color: #A0AFCD;
+  line-height: 18px;
+}
+#sidebar .footer-links a:hover {
+  text-decoration: underline;
+}
+.isOpenMenu #sidebar {
+  left: 0;
+  transition: 0.3s ease;
+}
+.modal .modal-dialog {
+  box-shadow: 0 1px 22px rgba(0, 0, 0, 0) !important;
+  border-radius: 5px;
+  background-color: white;
+  border: none;
+}
+.modal .modal-dialog .modal-content {
+  background-color: transparent;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 15px;
+}
+.modal .modal-dialog .modal-content .modal-header h4 {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #313B57;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+}
+.modal .modal-dialog .modal-content .modal-header h4 small {
+  color: #A0AFCD;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+.modal .modal-dialog .modal-content .modal-header button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.12s;
+  padding: 0;
+  font-size: 24px !important;
+}
+.modal .modal-dialog .modal-content .modal-header button:hover {
+  color: #313B57;
+  transition: 0.12s;
+  opacity: 1;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: #313B57;
+}
+.modal .modal-dialog .modal-content .modal-body p,
+.modal .modal-dialog .modal-content .modal-body ul,
+.modal .modal-dialog .modal-content .modal-body ol {
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: #313B57;
+}
+.modal .modal-dialog .modal-content .modal-body .tab-pane h3 {
+  font-size: 16px;
+  color: #A0AFCD;
+  font-weight: 600;
+}
+.modal .modal-dialog .modal-content .modal-body .modal-footer-buttons {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+.modal .modal-dialog .modal-content .modal-body .modal-footer-buttons button {
+  background-color: #1D5FEE;
+  color: #FFFFFF;
+  transition: 0.12s;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 3px;
+  box-shadow: 2px 0 12px rgba(16, 21, 44, 0.15);
+}
+.modal .modal-dialog .modal-content .modal-body .modal-footer-buttons button:hover {
+  cursor: pointer;
+  background-color: #1949D5;
+  transition: 0.12s;
+}
+.modal .modal-dialog hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#aboutModalBody {
+  padding-bottom: 15px !important;
+}
+.search-provider {
+  font-size: 11px;
+  padding: 10px 0 20px 0;
+  text-align: center;
+}
+#dataModalButtons a {
+  width: 100%;
+  text-align: center;
+  min-width: 100%;
+  display: block;
+  border-top: 1px solid rgba(160, 175, 205, 0.4);
+}
+#dataModalButtons a:first-child {
+  border-top: none !important;
+}
+#dataModalButtons a button {
+  width: 100%;
+  margin: 2px 0;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #10152C;
+}
+#dataModalButtons a button:hover {
+  text-decoration: underline;
+}
+.faq-modal-body {
+  padding-top: 8px !important;
+}
+.faq-modal-body h4 {
+  font-size: 16px;
+  color: #A0AFCD;
+}
+.faq-modal-body .faq-header {
+  background-color: transparent;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 6px 10px;
+  color: #313B57;
+  font-weight: 600;
+}
+.faq-modal-body .faq-header:hover {
+  color: #1D5FEE;
+}
+.faq-modal-body .faq-header .fa-angle-right {
+  font-weight: 900;
+  font-size: 16px;
+}
+.faq-modal-body .faq-body {
+  font-size: 11.5px;
+  line-height: 24px;
+  color: #313B57;
+  box-sizing: border-box;
+  padding: 5px 40px 40px 40px;
+}
+#aboutModalBody .user-guide-header {
+  font-size: 16px;
+  color: #A0AFCD;
+  font-weight: 600;
+}
+#aboutModalBody .user-guide-item {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(160, 175, 205, 0.4);
+  padding: 15px;
+}
+#aboutModalBody .user-guide-item p {
+  font-size: 12px;
+  color: #313B57;
+  line-height: 18px;
+}
+#aboutModalBody .user-guide-item p b {
+  font-size: 14px;
+  padding-bottom: 2px;
+  color: #10152C;
+}
+/*
     ===========================
     ===========================
          Main Menu
     ===========================
     ===========================
 */
-
 .identification {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 9pt;
-    display: block;
-    padding:8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 9pt;
+  display: block;
+  padding: 8px;
 }
-
 .panel-heading .accordion-toggle:after {
-    /* symbol for "opening" panels */
-    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: grey;         /* adjust as needed */
-    padding-left:8px;
+  /* symbol for "opening" panels */
+  font-family: 'Glyphicons Halflings';
+  /* essential for enabling glyphicon */
+  content: "\e114";
+  /* adjust as needed, taken from bootstrap.css */
+  float: right;
+  /* adjust as needed */
+  color: grey;
+  /* adjust as needed */
+  padding-left: 8px;
 }
 .panel-heading .accordion-toggle.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
-    padding-left:8px;
+  /* symbol for "collapsed" panels */
+  content: "\e080";
+  /* adjust as needed, taken from bootstrap.css */
+  padding-left: 8px;
 }
-
 #main-menu {
   width: 270px;
-  height: calc(100% - 70px);
+  height: calc(30%);
   float: left;
   background-color: #20202f;
   margin-top: 65px;
@@ -259,12 +482,10 @@ body {
   z-index: 999;
   transition: left .5s ease;
 }
-
 #main-menu .main-menu-container {
   overflow-y: auto;
   height: 100%;
 }
-
 .footer-links {
   display: block;
   box-sizing: border-box;
@@ -273,83 +494,28 @@ body {
   opacity: .75;
   text-align: center;
 }
-
 .footer-links a {
   display: inline-block;
   box-sizing: border-box;
   padding: 0px 4px 0px 4px;
   font-size: 10pt;
 }
-
 /************* END MAIN MENU **************/
-
 /************** All other stuff *********/
-
-@media (max-width: 1020px) {
-  #top-menu {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    border-bottom: 1px solid #191924;
-  }
-
-  #top-menu #mobile-main-menu {
-    order: 0;
-  }
-
-  #top-menu .title {
-    order: 1;
-    width: calc(100% - 95px);
-    text-align: center;
-    min-width: 1px;
-  }
-
-  #mobile-main-menu {
-    display: inline-block;
-  }
-
-  #main-menu {
-    left: -100%;
-    height: calc(100% - 69px);
-  }
-
-  .isOpenMenu #main-menu {
-    left: 0;
-  }
-
-  body {
-    padding-left:0px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  #main-menu {
-    height: calc(100% - 70px);
-  }
-
-}
-
 @media (max-width: 767px) {
-
   .app-name {
     display: none;
   }
-
   .app-name-mobile {
     display: inline;
-    font-size:small;
+    font-size: small;
   }
-
 }
-
 pre {
   word-wrap: normal;
   word-break: normal;
 }
-
 /************** All other stuff *********/
-
 #main-menu {
   background-color: #ECEEF3;
   font-family: 'Open Sans', sans-serif;
@@ -360,7 +526,6 @@ pre {
     background-color: rgba(236, 238, 243, 0.8);
   }
 }
-
 #main-menu .sidebar-panel {
   background-color: #FFFFFF;
   margin: 0 auto;
@@ -400,7 +565,6 @@ pre {
 #main-menu .panel-collapse {
   background-color: #FFFFFF;
 }
-
 #main-menu .slick-btn {
   border: none;
   outline: none;
@@ -436,127 +600,109 @@ pre {
   background-color: #ECEEF3;
   border-color: #4574CC;
 }
-
 #main-menu .slick-btn-selection {
   background-color: rgba(236, 238, 243, 0.5);
   border-color: #4574CC !important;
 }
-
 /* User Guide */
-
-.user-guide-header{
-    display: block;
-    text-align: center;
-    font-size: 16pt;
-    box-sizing: border-box;
-    padding: 10px 0 25px 0;
+.user-guide-header {
+  display: block;
+  text-align: center;
+  font-size: 16pt;
+  box-sizing: border-box;
+  padding: 10px 0 25px 0;
 }
-
-.user-guide-item{
-    display: block;
-    box-sizing: border-box;
-    padding: 35px 15px 35px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+.user-guide-item {
+  display: block;
+  box-sizing: border-box;
+  padding: 35px 15px 35px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.user-guide-item:nth-child(even){
-    background-color: rgba(0,0,0,0.04);
+.user-guide-item:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.04);
 }
-
-.user-guide-item .user-guide-item-image{
-    display: inline-block;
-    width: 100%;
-    height: 100px;
+.user-guide-item .user-guide-item-image {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
 }
-.user-guide-item img{
-    display: block;
-    height: 100%;
-    margin: 0 auto;
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-    border: 4px solid rgba(0,0,0,0.15);
+.user-guide-item img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  border: 4px solid rgba(0, 0, 0, 0.15);
 }
-.user-guide-item p{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 2;
-    padding-left: 15px !important;
-    padding-right: 20px !important;
-    box-sizing: border-box;
-    font-size: 12pt;
+.user-guide-item p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 2;
+  padding-left: 15px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box;
+  font-size: 12pt;
 }
-.user-guide-item p b{
-    color: rgba(0,0,0,0.6);
-    display: block;
-    font-weight: bolder;
-    padding-bottom: 10px;
+.user-guide-item p b {
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  font-weight: bolder;
+  padding-bottom: 10px;
 }
-
-#closeModalButton{
-  box-sizing: border-box; 
-  padding: 0 25px 35px;  
+#closeModalButton {
+  box-sizing: border-box;
+  padding: 0 25px 35px;
 }
-
-
 /*Frequently Asked Questions*/
-.faq-modal-body{
-    display: block;
-    box-sizing: border-box;
-    padding: 30px 25px;
+.faq-modal-body {
+  display: block;
+  box-sizing: border-box;
+  padding: 30px 25px;
 }
-.faq-header{
-    display: block;
-    font-size: 12pt;
-    margin-bottom: 8px;
-    background-color: #F5F5F5;
-    color: #555555;
-    box-sizing: border-box;
-    transition: 0.12s;
-    padding: 10px;
+.faq-header {
+  display: block;
+  font-size: 12pt;
+  margin-bottom: 8px;
+  background-color: #F5F5F5;
+  color: #555555;
+  box-sizing: border-box;
+  transition: 0.12s;
+  padding: 10px;
 }
-
-.faq-header i{
-    margin-left: 10px;
+.faq-header i {
+  margin-left: 10px;
 }
-.faq-header:hover{
-    cursor: pointer;
-    color: #6184DB;
-    transition: 0.12s;
+.faq-header:hover {
+  cursor: pointer;
+  color: #6184DB;
+  transition: 0.12s;
 }
-
-.faq-body{
-    display: none;
-    line-height: 1.6em;
-    color: #555555;
-    font-size: 10.35pt;
-    box-sizing: border-box;
-    padding: 10px 10px;
-
+.faq-body {
+  display: none;
+  line-height: 1.6em;
+  color: #555555;
+  font-size: 10.35pt;
+  box-sizing: border-box;
+  padding: 10px 10px;
 }
-.faq-body img{
-    display: block;
-    max-width: 100%;
-    margin: 10px auto;
+.faq-body img {
+  display: block;
+  max-width: 100%;
+  margin: 10px auto;
 }
-
-
 /* Hiding 'Powered by ESRI' logo */
 .map .logo-med {
   display: none;
 }
-
 /* Hiding 'Powered by ESRI' logo */
 .map .logo-med {
   display: none;
 }
-
-
-
 .esri-leaflet-logo leaflet-control {
-    display: none;
+  display: none;
 }
-
 /* Styling Home Button */
 .leaflet-control-defaultextent-toggle {
   text-indent: -9999px;
@@ -566,14 +712,11 @@ pre {
   height: 26px;
   display: block;
 }
-
 .leaflet-left {
   left: 275px;
   top: 75px;
 }
-
 /* Rotating FAQ arrows when clicked */
-
 #angle1 {
   transition-duration: 0.5s;
   transition-property: transform;
@@ -614,28 +757,29 @@ pre {
   transition-duration: 0.5s;
   transition-property: transform;
 }
-
 /* Rotates arrows for Basemap and Map Layers in sidebar */
 .panel-heading .accordion-toggle:after {
   /* symbol for "opening" panels */
-  font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-  content: "\e114";    /* adjust as needed, taken from bootstrap.css */
-  float: right;        /* adjust as needed */
-  color: grey;         /* adjust as needed */
+  font-family: 'Glyphicons Halflings';
+  /* essential for enabling glyphicon */
+  content: "\e114";
+  /* adjust as needed, taken from bootstrap.css */
+  float: right;
+  /* adjust as needed */
+  color: grey;
+  /* adjust as needed */
   padding: 0 0 0 10px;
   font-weight: 100;
 }
 .panel-heading .accordion-toggle.collapsed:after {
   /* symbol for "collapsed" panels */
-  content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+  content: "\e080";
+  /* adjust as needed, taken from bootstrap.css */
 }
-
 /*Custom CSS */
-
 .distanceSelect {
   width: 175px;
 }
-
 #grouphead {
   font-weight: 700;
   letter-spacing: 1px;
@@ -649,46 +793,37 @@ pre {
   background-color: transparent;
   border-color: transparent;
 }
-
 /* hiding esri service layer label in legend */
 .esriLegendLayerLabel {
   display: none;
 }
-
 #legendDiv_msg {
   display: none;
 }
-
 /* styling the legend images */
 .legendImage {
   display: block;
 }
-
 #distanceLegend {
-  font-weight: bold; 
+  font-weight: bold;
 }
-
 #waterLegend {
   font-weight: bold;
   padding-bottom: 15px;
 }
-
 .customLegendBody {
   padding: 0px 15px 15px 15px;
 }
-
 /* Styles for overview map */
-
 @media (max-width: 1000px) {
   .esriOverviewMap {
     display: none;
   }
 }
-
-.esriOverviewMap .ovwButton{
- padding: 10px; 
-} /* pads minimize arrow */
-
+.esriOverviewMap .ovwButton {
+  padding: 10px;
+}
+/* pads minimize arrow */
 .ovwContainer {
   width: 250px;
   height: 150px;
@@ -697,21 +832,18 @@ pre {
   bottom: 0px;
   right: 0px;
   padding: 2px;
-  border: 2px solid rgb(2, 5, 172);
+  border: 2px solid #0205ac;
 }
-
 /* .esriOverviewMap.ovwBR .ovwContainer {
  
 } */
-
 .esriControlsBR {
   display: none;
-} /* hides esri attribution for basemap in bottom right of screen */
-
+}
+/* hides esri attribution for basemap in bottom right of screen */
 .opacity {
   padding-left: 10px;
 }
-
 .opacitySlider {
   position: absolute;
   color: white;
