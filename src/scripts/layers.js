@@ -138,7 +138,7 @@ var allLayers;
                         "includeLegend" : false
                     }
                 },
-                "Lida-based 1m reduction": {
+                "Lidar-based 1m reduction": {
                     "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [9, 5],
                     "options": {
@@ -154,7 +154,7 @@ var allLayers;
                         "includeLegend" : false
                     }
                 },
-                "Lida-based 50m reduction": {
+                "Lidar-based 50cm reduction": {
                     "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [7, 5],
                     "options": {
