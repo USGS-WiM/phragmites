@@ -8,7 +8,7 @@
     <link rel="copyright" href="license.txt">
     <link rel="shortcut icon" id="favicon" type="image/ico" href="images/favicon-dark.png" />
     <title>
-        phragmites
+        Phragmites Decision Support Tool
     </title>
 
     <link rel="stylesheet" href="https://txpub.usgs.gov/DSS/search_api/2.1/api/search_api.css" />
@@ -82,7 +82,7 @@
                 
         <div class="title">
             <a class='top-menu-brand' href="https://www.usgs.gov"><img id="logo" src="images/usgs_logo.png"></a>
-            <span class="app-name">phragmites</span> <span class="app-name-mobile">phragmites</span>
+            <span class="app-name"><i>Phragmites</i> Decision Support Tool</span> <span class="app-name-mobile">Phragmites</span>
         </div>
 
         <button id="geosearchButton" type="button" class="btn btn-default top-menu-btn pull-right" >
@@ -108,31 +108,7 @@
     </div>
 
     <div id="sidebar" class="col-xs-11 col-sm-10 col-md-3 col-lg-2 sidebar sidebar-left sidebar-animate sidebar-md-show no-col-padding">
-        <div class="panel panel-default wim-sidebar-panel">
-            <div class="panel-heading" id="basemapsHeader">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#basemapsPanel" aria-expanded="false" aria-controls="basemapsPanel">
-                        Basemaps
-                    </a>
-                </h4>
-            </div>
-            <div id="basemapsPanel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="basemapsHeader">
-                <div class="panel-body collapse in">
-                    <button id="btnStreets" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/streets.jpg"><br class="basemapThumb">Streets</button>
-                    <button id="btnSatellite" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/satellite.jpg"><br class="basemapThumb">Satellite</button>
-                    <button id="btnHybrid" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/imagery_labels.jpg"><br class="basemapThumb">Hybrid</button>
-                    <!-- <button id="btnShadedRelief" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/shaded-relief.png"><br class="basemapThumb">Shaded Relief</button> -->
-                    <button id="btnTopo" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/topo.jpg"><br class="basemapThumb">Topo</button>
-                    <button id="btnTerrain" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/terrain.jpg"><br class="basemapThumb">Terrain</button>
-                    <button id="btnGray" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/gray.jpg"><br class="basemapThumb">Gray</button>
-                    <button id="btnDarkGray" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/dark-gray.png"><br class="basemapThumb">Dark Gray</button>
-                    <button id="btnOSM" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/osm.jpg"><br class="basemapThumb">OSM</button>
-                    <button id="btnNatGeo" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/natgeo.jpg"><br class="basemapThumb">NatGeo</button>
-                    <!-- button id="btnNatlMap" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/national_map.jpg"><br class="basemapThumb">Nat'l Map</button> -->
-                </div>
-
-            </div>
-        </div>
+        
 
         <!-- <div class="panel panel-default wim-sidebar-panel">
                 <div class="panel-heading" id="distancePanelHeader">
@@ -159,6 +135,32 @@
                 <div id="toggle" style="padding: 2px 2px;"></div>
             </div>
         </div>
+
+        <div class="panel panel-default wim-sidebar-panel">
+            <div class="panel-heading" id="basemapsHeader">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#basemapsPanel" aria-expanded="false" aria-controls="basemapsPanel">
+                        Basemaps
+                    </a>
+                </h4>
+            </div>
+            <div id="basemapsPanel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="basemapsHeader">
+                <div class="panel-body collapse in">
+                    <button id="btnStreets" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/streets.jpg"><br class="basemapThumb">Streets</button>
+                    <button id="btnSatellite" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/satellite.jpg"><br class="basemapThumb">Satellite</button>
+                    <button id="btnHybrid" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/imagery_labels.jpg"><br class="basemapThumb">Hybrid</button>
+                    <!-- <button id="btnShadedRelief" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/shaded-relief.png"><br class="basemapThumb">Shaded Relief</button> -->
+                    <button id="btnTopo" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/topo.jpg"><br class="basemapThumb">Topo</button>
+                    <button id="btnTerrain" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/terrain.jpg"><br class="basemapThumb">Terrain</button>
+                    <button id="btnGray" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/gray.jpg"><br class="basemapThumb">Gray</button>
+                    <button id="btnDarkGray" class="btn btn-default basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/dark-gray.png"><br class="basemapThumb">Dark Gray</button>
+                    <button id="btnOSM" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/osm.jpg"><br class="basemapThumb">OSM</button>
+                    <button id="btnNatGeo" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/natgeo.jpg"><br class="basemapThumb">NatGeo</button>
+                    <!-- button id="btnNatlMap" class="btn btn-default basemapBtn equalize"><img class="basemapThumb" alt="" src="images/national_map.jpg"><br class="basemapThumb">Nat'l Map</button> -->
+                </div>
+
+            </div>
+        </div>
         
 
         <!-- # closing div tag for accordion style panels -->
@@ -182,7 +184,7 @@
                 <div class="modal-header">
                     <button class="close" type="button" data-dismiss="modal" aria-hidden="true" style="color:gray;">&times;</button>
                     <h4 class="modal-title" id="aboutModalTitle">
-                        phragmites
+                        <i>Phragmites</i> Decision Support Tool
                     </h4>
                 </div>
                 <div id="aboutModalBody" class="modal-body">
@@ -194,11 +196,11 @@
                     </ul>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="aboutTabPane">
-                            <p>The GLRI Phragmites Decision Support Tool (DST) Mapper is intended to provide resource managers with information to strategically develop effective Phragmites control and invasion prevention programs in the Great Lakes coastal zone (10 km inland from the shoreline). The Mapper consists of three integrated components:</p>
+                            <p>The GLRI <i>Phragmites</i> Decision Support Tool (DST) Mapper is intended to provide resource managers with information to strategically develop effective <i>Phragmites</i> control and invasion prevention programs in the Great Lakes coastal zone (10 km inland from the shoreline). The Mapper consists of three integrated components:</p>
                             <ol>
-                                <li>A distribution map of large (> 0.2 ha) stands of existing Phragmites.</li>
-                                <li>A map of estimated Phragmites habitat suitability based on current environmental conditions.</li>
-                                <li>Corridor networks including reduced lake-level scenarios that are weighted by proximity to existing Phragmites to show likely invasion pathways.</li>
+                                <li>A distribution map of large (> 0.2 ha) stands of existing <i>Phragmites</i>.</li>
+                                <li>A map of estimated <i>Phragmites</i> habitat suitability based on current environmental conditions.</li>
+                                <li>Corridor networks including reduced lake-level scenarios that are weighted by proximity to existing <i>Phragmites</i> to show likely invasion pathways.</li>
                             </ol>
                             <p>Please explore the mapper or see our <a href=# target="_blank">User Guide</a> and <a href="#" target="_blank">FAQ</a> for a depiction of the various features.</p>
                             <hr>
@@ -209,17 +211,16 @@
                             <h3>References</h3>
                             <p>Anderson, R. P., A. T. Peterson, and S. L. Egbert. 2006. Vegetation-index models predict areas vulnerable to purple loosestrife (Lythrum salicaria) invasion in Kansas. The Southwestern Naturalist 51: 471-480. (doi: <a href="http://dx.doi.org/10.1894/0038-4909(2006)51[471:VMPAVT]2.0.CO;2" target="_blank">http://dx.doi.org/10.1894/0038-4909(2006)51[471:VMPAVT]2.0.CO;2</a>)</p>
                             <p>Angel, J. R. and K. E. Kunkel. 2010. The response of Great Lakes water levels to future climate scenarios with an emphasis on Lake Michigan-Huron. Journal of Great Lakes Research 36: 51-58. (doi: <a href="http://dx.doi.org/10.1016/j.jglr.2009.09.006" target="_blank">http://dx.doi.org/10.1016/j.jglr.2009.09.006</a>)</p>
-                            <p>Bourgeau-Chavez, L. L., K. P. Kowalski, M. L. Carlson Mazur, K. A. Scarbrough, R. B. Powell, C. N. Brooks, B. Huberty, L. K. Jenkins, E. C. Banda, D. M. Galbraith, Z. Laubach, and K. Riordan. 2013. Mapping invasive Phragmites australis in the coastal Great Lakes with ALOS PALSAR satellite imagery for decision support. Journal of Great Lakes Research 39: 65-77. (doi: http://dx.doi.org/10.1016/j.jglr.2012.11.001)</p>
-                            <p>Carlson, M. L., K. P. Kowalski, and D. A. Wilcox. 2009. Promoting species establishment in a Phragmites-dominated Great Lakes coastal wetland. Natural Areas Journal 29:262-280. (doi: <a href="http://dx.doi.org/10.3375/043.029.0306" target="_blank">http://dx.doi.org/10.3375/043.029.0306</a>)</p>
-                            <p>Carlson Mazur, M. L., K. P. Kowalski and D. Galbraith. 2014. Assessment of suitable habitat for Phragmites australis (common reed) in the Great Lakes coastal zone. Aquatic Invasions 9: 1-19. (doi: <a href="http://dx.doi.org/10.3391/ai.2014.9.1.01" target="_blank">http://dx.doi.org/10.3391/ai.2014.9.1.01</a>)</p>
+                            <p>Bourgeau-Chavez, L. L., K. P. Kowalski, M. L. Carlson Mazur, K. A. Scarbrough, R. B. Powell, C. N. Brooks, B. Huberty, L. K. Jenkins, E. C. Banda, D. M. Galbraith, Z. Laubach, and K. Riordan. 2013. Mapping invasive <i>Phragmites</i> australis in the coastal Great Lakes with ALOS PALSAR satellite imagery for decision support. Journal of Great Lakes Research 39: 65-77. (doi: http://dx.doi.org/10.1016/j.jglr.2012.11.001)</p>
+                            <p>Carlson, M. L., K. P. Kowalski, and D. A. Wilcox. 2009. Promoting species establishment in a <i>Phragmites</i>-dominated Great Lakes coastal wetland. Natural Areas Journal 29:262-280. (doi: <a href="http://dx.doi.org/10.3375/043.029.0306" target="_blank">http://dx.doi.org/10.3375/043.029.0306</a>)</p>
+                            <p>Carlson Mazur, M. L., K. P. Kowalski and D. Galbraith. 2014. Assessment of suitable habitat for <i>Phragmites</i> australis (common reed) in the Great Lakes coastal zone. Aquatic Invasions 9: 1-19. (doi: <a href="http://dx.doi.org/10.3391/ai.2014.9.1.01" target="_blank">http://dx.doi.org/10.3391/ai.2014.9.1.01</a>)</p>
                             <p>Coutts, S. R., R. D. van Klinken, H. Yokomizo, and Y. M. Buckley. 2011. What are the key drivers of spread in invasive plants: dispersal, demography or landscape: and how can we use this knowledge to aid management? Biological Invasions 13: 1649-1661. (doi: <a href="http://dx.doi.org/10.1007/s10530-010-9922-5" target="_blank">http://dx.doi.org/10.1007/s10530-010-9922-5</a>)</p>
                             <p>Elith, J., M. Kearney, and S. Phillips. 2010. The art of modeling range-shifting species. Methods in Ecology and Evolution 1: 330-342. (doi: <a href="http://dx.doi.org/10.1111/j.2041-210X.2010.00036.x" target="_blank">http://dx.doi.org/10.1111/j.2041-210X.2010.00036.x</a>)</p>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="contactTabPane">
                             <h3>Contact Us</h3>
-                            <p>Add contact information for cooperator agency.</p>
-                            <p><i class="glyphicon glyphicon-envelope"></i> email:</p>
-                            <p><i class="glyphicon glyphicon-earphone"></i> phone:</p>
+                            <p>For content questions, contact Kurt Kowalski. <br><i class="glyphicon glyphicon-envelope"></i>&nbsp;<a href="mailto:kkowalski@usgs.gov">kkowalski@usgs.gov</a>&nbsp;&nbsp;<i class="glyphicon glyphicon-earphone"></i> phone: 734-214-9308</p>
+                            <p>For web or technical questions, contact Lauren Privette. <br><i class="glyphicon glyphicon-envelope"></i>&nbsp;<a href="mailto:lprivette@usgs.gov">lprivette@usgs.gov</a>&nbsp;&nbsp;<i class="glyphicon glyphicon-earphone"></i> phone: 703-648-5315</p>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="disclaimerTabPane">
                             <h3>Disclaimer</h3>
@@ -315,10 +316,10 @@
                         <button type="button" class="btn btn-secondary dataButton btn-md">Within streams, wetlands, and water bodies&nbsp;&nbsp;<span class="fa fa-download"></span></button>
                     </a>
                     <a target="_blank" href="data/PhragmitesExtent.zip">
-                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Phragmites stand > 0.2 ha&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload"><i>Phragmites</i> stand > 0.2 ha&nbsp;&nbsp;<span class="fa fa-download"></span></button>
                     </a>
                     <a target="_blank" href="data/habsuit_32flt.zip">
-                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Phragmites habitat suitability&nbsp;&nbsp;<span class="fa fa-download"></span></button>
+                        <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload"><i>Phragmites</i> habitat suitability&nbsp;&nbsp;<span class="fa fa-download"></span></button>
                     </a>
                     <a target="_blank" href="data/rllcntr1m.zip">
                         <button type="button" class="btn btn-secondary dataButton btn-md" id="dataDownload">Contour-based 1m reduction&nbsp;&nbsp;<span class="fa fa-download"></span></button>
@@ -360,93 +361,41 @@
                             <div role="tabpanel" class="tab-pane active" id="searchTabPane">
                                 <span class="user-guide-header">Search, zoom, and print capabilities</span>
                                 <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
+                                    <div class="user-guide-item-image"><img src="images/userguide/findlocation.png" /></div>
                                     <p><b>Searching</b>The search option allows the user to search for a location such as a
                                         city, state, zip code, or general place name.</p>
                                 </div>
                                 <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
+                                    <div class="user-guide-item-image"><img src="images/userguide/zoom.png" /></div>
                                     <p><b>Navigating the map</b>The scroll wheel on the mouse can be used to zoom, and in the
                                         upper left area of the tool are "+" and "&#45;" icons to zoom in and out, respectively.
                                         You may also hold shift and drag a box to zoom. On mobile or touch screens, simply
                                         pinch the screen to zoom.</p>
                                 </div>
                                 <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
+                                    <div class="user-guide-item-image"><img src="images/userguide/home.png" /></div>
                                     <p><b>Home Location</b>The crosshair button will zoom the map to your location, and the
                                         home button will center the US on the map.</p>
-                                </div>
-                                <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>Opening a site</b>Clicking on an arrow or circle at a site will bring up a window
-                                        with details about the site, graphs of the original data and model predictions (for
-                                        some constituents), and a table of the other trend results at the same site.</p>
-                                </div>
-                                <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>Moving site window</b>Reposition the site info pop-up window with the mouse see the
-                                        rest of the underlying map if necessary.</p>
-                                </div>
-                                <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>More site details</b>Additional details about the graphs are available in the FAQs.
-                                        Additional details about the column headers in the table are available by hovering
-                                        on the help button for each column header.</p>
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="explanationTabPane">
                                 <span class="user-guide-header">Explanation</span>
                                 <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
+                                    <div class="user-guide-item-image"><img src="images/userguide/explanation.png" /></div>
                                     <p><b>Explanation display</b>The Explanation box can be collapsed to display more of the
                                         mapped area.</p>
-                                </div>
-                                <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>Using the Explanation</b>The expanded Explanation box explains the arrows and circles
-                                        that appear for each site, displaying the results from the statistical analysis of
-                                        trends.</p>
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="mapSelectionTabPane">
                                 <span class="user-guide-header">Map selection options</span>
                                 <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
+                                    <div class="user-guide-item-image"><img src="images/userguide/basemaps.png" /></div>
                                     <p><b>Changing the basemap style</b>The "Basemaps" sidebar allows a user to show various
-                                        geographic information or landscape imagery as a background layer beneath the trend
-                                        results.</p>
+                                        geographic information or landscape imagery as a background layer beneath the Map Layers.</p>
                                 </div>
                                 <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>Changing or adding map layers</b>The "Map Layers" sidebar allows a user to show land
-                                        use for 1974, 1982, 1992, 2002, or 2012 as a background layer beneath the trend results.</p>
-                                </div>
-                                <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>Selecting a constituent</b>The Constituent group selection allows a user to choose
-                                        a constituent group and then choose a specific constituent from within that group.
-                                        See About -&gt; Learn More for a list of constituents.</p>
-                                </div>
-                                <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>Selecting a trend type</b>Based on the constituent selection, a user can choose from
-                                        among the available trend types. Concentration is the amount of the constituent in
-                                        the stream. Load is the mass of the constituent transported past the sampling point
-                                        in a stream during a period of time. A metric is an index calculated to represent
-                                        a specific characteristic of aquatic communities. Changes over time in water-quality
-                                        concentration and load and changes in aquatic ecology-metrics can be strongly influenced
-                                        by random and systematic variations in streamflow. Flow normalization removes the
-                                        variation in concentration, load, or metric that is due to variations in streamflow.
-                                        As a result, concentration and load trends are flow normalized and aquatic ecology
-                                        metric trends are flow normalized. See FAQ #17 for more information. Note not all
-                                        trend types are available for every constituent.</p>
-                                </div>
-                                <div class="user-guide-item">
-                                    <div class="user-guide-item-image"><img src="https://placehold.it/140x60" /></div>
-                                    <p><b>Selecting a trend period</b>Based on the constituent selection, a user can choose
-                                        from among the available trend periods. Once the constituent, trend type, and trend
-                                        period have been selected, the map will automatically update. Note not all trend
-                                        periods are available for every constituent.</p>
+                                    <div class="user-guide-item-image"><img src="images/userguide/maplayers.png" /></div>
+                                    <p><b>Changing or adding map layers</b>The "Map Layers" sidebar allows a user to select different contextual layers.</p>
                                 </div>
                             </div>
                         </div>
@@ -474,49 +423,49 @@
                     </div>
                     <div class="faq-modal-body modal-body">
                         <h4 style="margin-bottom: 15px; font-weight: 600;">Study scope</h4>
-                        <div class="faq-header" id="faq1header">1. What is Phragmites? Why is it a problem?
+                        <div class="faq-header" id="faq1header">1. What is <span style="font-style: italic;">Phragmites?</span>&nbsp; Why is it a problem?
                             <div id="angle1" style="display: -webkit-inline-box;"><i class="fa fa-angle-right"></i></div>
                         </div>
                         <div class="faq-body" id="faq1body">
-                            Although there are native <a href="https://www.invasivespeciesinfo.gov/aquatics/commonreed.shtml" target="_blank">Phragmites</a> types
+                            Although there are native <a href="https://www.invasivespeciesinfo.gov/aquatics/commonreed.shtml" target="_blank"><i>Phragmites</i></a> types
                             endemic to North America, a highly invasive Eurasian subspecies began establishing itself here during the 1800s. The invasive type can
                             grow up to 5 m in height and form impenetrable stands that can quickly degrade large areas of highly productive coastal wetlands and 
-                            shorelines. Phragmites invasions can hinder access to, and use of, beaches and recreation areas; present a fire hazard; reduce the 
+                            shorelines. <i>Phragmites</i> invasions can hinder access to, and use of, beaches and recreation areas; present a fire hazard; reduce the 
                             property value of coastal homes; physically alter the landscape structure; and impact critical natural habitat for fish and wildlife. 
-                            In the Great Lakes coastal zone, Phragmites has shown that it can rapidly colonize mudflats exposed by low lake levels. Phragmites 
+                            In the Great Lakes coastal zone, <i>Phragmites</i> has shown that it can rapidly colonize mudflats exposed by low lake levels. <i>Phragmites</i> 
                             management is a common objective of private and public land managers. Current management efforts include mowing, burning, and herbicide 
                             application, but they are very costly and must be repeated to achieve long-term success (Figure 1).
                             <br>
                             <br>    
                             <div style="text-align:center;">
                                     <img src="images/phragmites_photo.png">
-                                    <small>Figure 1. Phragmites regrowth in a coastal marsh after aerial treatment of herbicide (photo courtesy of USGS).</small>
+                                    <small>Figure 1. <i>Phragmites</i> regrowth in a coastal marsh after aerial treatment of herbicide (photo courtesy of USGS).</small>
                             </div>
                                 <br>
                             Studies have shown that early attention and treatment is critical for long-term success (Carlson et al. 2009). 
-                            In areas where Phragmites is already well established, complete eradication may be unrealistic, so a coordinated control 
+                            In areas where <i>Phragmites</i> is already well established, complete eradication may be unrealistic, so a coordinated control 
                             strategy will help to maximize benefits per unit cost. Funding was provided by the Great Lakes Restoration Initiative (GLRI) 
                             for the development of a basin-wide distribution map and decision support tool. The goal of this tool is to help users 
                             prioritize restoration efforts, identify areas most at risk to future invasions, and highlight areas where monitoring and rapid 
                             response can prevent future expansion.
                         </div>
 
-                        <div class="faq-header" id="faq2header">2. What is the Phragmites Decision Support Tool (DST), and how do I use it?
+                        <div class="faq-header" id="faq2header">2. What is the <span style="font-style: italic;">Phragmites?</span>&nbsp; Decision Support Tool (DST), and how do I use it?
                             <div id="angle2" style="display: -webkit-inline-box;"><i class="fa fa-angle-right"></i></div>
                         </div>
                         <div class="faq-body" id="faq2body">
                             The DST is a map-based tool that consists of three integrated components: 1) a basin-wide distribution map of current
-                             Phragmites populations, 2) a habitat suitability index based on current environmental conditions, and 3) a map of potential 
-                             invasion pathways defined by corridor networks that are weighted by proximity to existing Phragmites. Mapping existing 
-                             invasive Phragmites utilized remotely sensed imagery and provided the basis for the other two components of the DST 
+                             <i>Phragmites</i> populations, 2) a habitat suitability index based on current environmental conditions, and 3) a map of potential 
+                             invasion pathways defined by corridor networks that are weighted by proximity to existing <i>Phragmites</i>. Mapping existing 
+                             invasive <i>Phragmites</i> utilized remotely sensed imagery and provided the basis for the other two components of the DST 
                              (<a href="http://www.mtri.org/monitoring_phragmites.html" target="_blank">http://www.mtri.org/monitoring_phragmites.html</a>). 
                              The habitat suitability index is intended to provide land managers with a general estimation of relative vulnerability to 
-                             future invasions based on environmental conditions. It maps the relative habitat quality of the landscape for Phragmites 
+                             future invasions based on environmental conditions. It maps the relative habitat quality of the landscape for <i>Phragmites</i> 
                              establishment and is broken down into six different classes: most suitable, more suitable, suitable, unsuitable, more 
-                             unsuitable, and most unsuitable. It is important to remember that Phragmites is an aggressive invader and can grow in 
+                             unsuitable, and most unsuitable. It is important to remember that <i>Phragmites</i> is an aggressive invader and can grow in 
                              surprising areas, including those classified as "unsuitable" in our maps. The corridor networks consist of inland streams, 
                              wetlands, and water bodies as well as offshore corridors that may be exposed during periods of reduced lake levels and are 
-                             thus vulnerable to Phragmites expansion. The components of the DST are collectively intended to provide users with a robust 
+                             thus vulnerable to <i>Phragmites</i> expansion. The components of the DST are collectively intended to provide users with a robust 
                              depiction of vulnerability to future invasions and provide a spatial framework for planning, prioritized monitoring, control, 
                              and habitat restoration projects within the U.S. portion of the Great Lakes coastal zone (10 km inland from the shoreline).
                         </div>
@@ -526,18 +475,18 @@
                         </div>
                         <div class="faq-body" id="faq3body">
                             The data contained in the DST represent landscape-scale information that can assist management decisions across the diverse 
-                            range of conditions found within the Great Lakes basin. Phragmites prevalence varies widely across the basin, so appropriate 
+                            range of conditions found within the Great Lakes basin. <i>Phragmites</i> prevalence varies widely across the basin, so appropriate 
                             management strategies for minimizing further invasions and implementing effective restoration projects also vary based on local 
-                            conditions. At basin- or lake-wide scales, the DST provides managers with a broad view of the range of Phragmites' prevalence 
+                            conditions. At basin- or lake-wide scales, the DST provides managers with a broad view of the range of <i>Phragmites</i>' prevalence 
                             and allows the identification of areas with suitable habitat that are not yet colonized (Figure 2). This information can highlight 
                             heavily infested areas where patches with high biodiversity are rare, identify regions where control efforts invested now could 
-                            reduce long-term costs by preventing Phragmites from becoming well established, and guide monitoring and early detection to prevent 
+                            reduce long-term costs by preventing <i>Phragmites</i> from becoming well established, and guide monitoring and early detection to prevent 
                             future encroachment.
                             <br>
                             <br>
                             <div style="text-align:center;">
                                 <img src="images/suitability_layer.png">
-                                <small><strong>Figure 2.</strong> Distribution of large Phragmites stands throughout the Great Lakes basin.</small>
+                                <small><strong>Figure 2.</strong> Distribution of large <span style="font-style: italic;">Phragmites?</span>&nbsp; stands throughout the Great Lakes basin.</small>
                             </div>
                             <br>
                             At finer scales, the habitat suitability index and corridor networks provide insight to different aspects of vulnerability, 
@@ -549,10 +498,10 @@
                             <br>
                             <div style="text-align:center;">
                                 <img src="images/existing_stands_saginaw_bay.png">
-                                <small><strong>Figure 3.</strong> Existing stands of Phragmites near Lake Huron's Saginaw Bay. Modeled levels of habitat suitability for Phragmites also are shown.</small>
+                                <small><strong>Figure 3.</strong> Existing stands of <i>Phragmites</i> near Lake Huron's Saginaw Bay. Modeled levels of habitat suitability for <i>Phragmites</i> also are shown.</small>
                             </div>
                             <br>
-                            In areas with intermediate densities of Phragmites, stands adjacent to or within large areas of suitable habitat could be 
+                            In areas with intermediate densities of <i>Phragmites</i>, stands adjacent to or within large areas of suitable habitat could be 
                             preferentially targeted for immediate control efforts to slow expansion (Figure 4). Suitable habitat adjacent to highly 
                             valued areas such as wildlife refuges or public beaches could be identified for monitoring and rapid response treatment to 
                             prevent the infestation of key features.
@@ -560,18 +509,18 @@
                             <br>
                             <div style="text-align:center;">
                                 <img src="images/northeastern_lake_michigan.png">
-                                <small><strong>Figure 4.</strong> Northeastern Lake Michigan's coastal zone contains some large Phragmites stands within and near extensive areas of suitable habitat nearby.</small>
+                                <small><strong>Figure 4.</strong> Northeastern Lake Michigan's coastal zone contains some large <span style="font-style: italic;">Phragmites?</span>&nbsp; stands within and near extensive areas of suitable habitat nearby.</small>
                             </div>
                             <br>
-                            In sparsely invaded areas, the locations of existing Phragmites patches in relation to networks of coastal, riparian, and 
+                            In sparsely invaded areas, the locations of existing <i>Phragmites</i> patches in relation to networks of coastal, riparian, and 
                             wetland corridors can identify likely expansion pathways and illustrate the need for early treatment (Figure 5). Identifying 
-                            isolated patches of Phragmites in these areas for treatment and targeting treatment areas adjacent to wetland and riparian 
-                            corridors could minimize the Phragmites invasion.
+                            isolated patches of <i>Phragmites</i> in these areas for treatment and targeting treatment areas adjacent to wetland and riparian 
+                            corridors could minimize the <i>Phragmites</i> invasion.
                             <br>
                             <br>
                             <div style="text-align:center;">
                                 <img src="images/northern_lake_huron.png">
-                                <small><strong>Figure 5.</strong> Small patches of Phragmites lie within networks of riparian, wetland, and offshore areas in northern Lake Huron.</small>
+                                <small><strong>Figure 5.</strong> Small patches of <span style="font-style: italic;">Phragmites?</span>&nbsp; lie within networks of riparian, wetland, and offshore areas in northern Lake Huron.</small>
                             </div>
                         </div>
 
@@ -580,43 +529,43 @@
                         </div>
                         <div class="faq-body" id="faq4body">
                             Cooperative research between the USGS Great Lakes Science Center and Michigan Technical Research Institute (MTRI) led 
-                            to the development of a distribution map of invasive Phragmites along the U. S. side of the Great Lakes coastal zone 
+                            to the development of a distribution map of invasive <i>Phragmites</i> along the U. S. side of the Great Lakes coastal zone 
                             (10 km inland from the shoreline). MTRI scientists used satellite-based radar data and an extensive network of field 
                             sites to conduct an unsupervised and supervised remote sensing classification exercise and to perform an accuracy 
                             assessment of the resulting map. Satellite imagery came from multiple dates throughout the growing seasons of 2008-2010, 
                             and a total of 1,145 field sites from 2010 and 2011 were used to train and validate remote sensing classification methods. 
                             Mapping efforts identified dense stands that were larger than 0.2 ha (0.5 ac) and erred on the side of inclusion in order 
-                            to identify as many areas potentially infested by Phragmites as possible (Bourgeau-Chavez el al. 2013).
+                            to identify as many areas potentially infested by <i>Phragmites</i> as possible (Bourgeau-Chavez el al. 2013).
                         </div>
 
                         <div class="faq-header" id="faq5header">5. How was habitat suitability estimated?
                             <div id="angle5" style="display: -webkit-inline-box;"><i class="fa fa-angle-right"></i></div>
                         </div>
                         <div class="faq-body" id="faq5body">
-                            A Geographic Information System (GIS) was used to sample environmental conditions and the newly developed Phragmites 
+                            A Geographic Information System (GIS) was used to sample environmental conditions and the newly developed <i>Phragmites</i> 
                             map across the study area (Carlson Mazur et al. 2014). Existing GIS data were gathered and processed to produce a set 
                             of 87 candidate variables describing environmental conditions. These variables were hypothesized to directly influence 
-                            Phragmites distribution or to serve as surrogates for processes or conditions that are direct influences based on a 
-                            conceptual model of Phragmites' biological requirements. The initial set of 87 candidate variables was reduced to 15 for 
-                            use as predictors of Phragmites occurrence. Statistical models (boosted regression trees) were used to estimate the 
-                            ecological niche of Phragmites. These models produced a continuous index of habitat suitability which was reclassified 
+                            <i>Phragmites</i> distribution or to serve as surrogates for processes or conditions that are direct influences based on a 
+                            conceptual model of <i>Phragmites</i>' biological requirements. The initial set of 87 candidate variables was reduced to 15 for 
+                            use as predictors of <i>Phragmites</i> occurrence. Statistical models (boosted regression trees) were used to estimate the 
+                            ecological niche of <i>Phragmites</i>. These models produced a continuous index of habitat suitability which was reclassified 
                             to depict six categories of relative quality.
                             <br>
-                            The Phragmites habitat suitability map layer is a dataset published with the paper 
+                            The <i>Phragmites</i> habitat suitability map layer is a dataset published with the paper 
                             <a href="http://www.aquaticinvasions.net/2014/AI_2014_CarlsonMazur_etal.pdf" target="_blank">Assessment of suitable habitat for 
-                            Phragmites australis (common reed) in the Great Lakes coastal zone</a>, which is available for download. An 
+                            <i>Phragmites</i> australis (common reed) in the Great Lakes coastal zone</a>, which is available for download. An 
                             <a href="https://cida.usgs.gov/glri/documents/CountyAppendix_CarlsonMazur2014.pdf" target="blank">appendix</a> that 
-                            provides county-level summaries of current Phragmites extent, both offshore and total area in each county, is also 
+                            provides county-level summaries of current <i>Phragmites</i> extent, both offshore and total area in each county, is also 
                             available.
                         </div>
 
-                        <div class="faq-header" id="faq6header">6. What environmental conditions most influence current Phragmites distribution at a basin-wide scale?
+                        <div class="faq-header" id="faq6header">6. What environmental conditions most influence current <span style="font-style: italic;">Phragmites?</span>&nbsp; distribution at a basin-wide scale?
                             <div id="angle6" style="display: -webkit-inline-box;"><i class="fa fa-angle-right"></i></div>
                         </div>
                         <div class="faq-body" id="faq6body">  
-                            Phragmites distribution was tied most closely with topography, proximity to development, soil conditions, and road 
-                            density. In general, Phragmites in the Great Lakes coastal zone tends to prefer flatter areas that are close to 
-                            development. Shallow or poorly drained soils and a relatively high road density are also tied closely with Phragmites 
+                            <i>Phragmites</i> distribution was tied most closely with topography, proximity to development, soil conditions, and road 
+                            density. In general, <i>Phragmites</i> in the Great Lakes coastal zone tends to prefer flatter areas that are close to 
+                            development. Shallow or poorly drained soils and a relatively high road density are also tied closely with <i>Phragmites</i> 
                             occurrence (Carlson Mazur et al. 2014).
                         </div>
 
@@ -643,12 +592,12 @@
                             and Lake St. Clair. This contour line was used for those areas missing LIDAR data.
                             <br>
                             <br>
-                            Offshore and inland corridors were weighted by distance to existing Phragmites. This allows a simple and easily 
+                            Offshore and inland corridors were weighted by distance to existing <i>Phragmites</i>. This allows a simple and easily 
                             interpretable means for assessing relative vulnerability to future expansion within corridor networks in addition to the 
                             habitat suitability index.
                         </div>
 
-                        <div class="faq-header" id="faq8header">8. Are water level fluctuations tied to Phragmites distribution?
+                        <div class="faq-header" id="faq8header">8. Are water level fluctuations tied to <span style="font-style: italic;">Phragmites?</span>&nbsp; distribution?
                             <div id="angle8" style="display: -webkit-inline-box;"><i class="fa fa-angle-right"></i></div>
                         </div>
                         <div class="faq-body" id="faq8body">
@@ -665,11 +614,11 @@
                             <br>
                             Mean 2009 levels were used as a base line for simulating lake-level reductions because the goal of this project was to 
                             forecast likely expansion patterns, and 2009 marked the time between which imagery was gathered and ground truthing 
-                            conducted to establish the current Phragmites extent maps. It should be noted that 2009 lake levels in Lakes Huron and 
+                            conducted to establish the current <i>Phragmites</i> extent maps. It should be noted that 2009 lake levels in Lakes Huron and 
                             Michigan were relatively lower than those in the lower Great Lakes based on long-term records, so fixed lake-level 
                             reduction scenarios based on 2009 levels also occurred less frequently in the past for Lakes Huron and Michigan. Lake 
                             Superior and Lake Ontario did not experience the degree of low lake levels seen in the other lakes during the 2000-2010 
-                            decade, and this may be related to Phragmites' relative scarcity in those lakes.
+                            decade, and this may be related to <i>Phragmites</i>' relative scarcity in those lakes.
                         </div>
                         
 
@@ -684,8 +633,8 @@
                             the Great Lakes. The onset and duration of the growing season interact with precipitation rates to influence lake levels, 
                             and these interactions are complex, contain feedback loops, and are difficult to accurately predict given the 
                             uncertainty of future climate conditions. Given these uncertainties, climate change may reduce water levels and increase 
-                            disturbance through extreme precipitation events and flooding, thereby exposing new areas for Phragmites establishment 
-                            (Angel et al. 2010). Longer growing seasons and nutrient processing dynamics may give Phragmites additional competitive 
+                            disturbance through extreme precipitation events and flooding, thereby exposing new areas for <i>Phragmites</i> establishment 
+                            (Angel et al. 2010). Longer growing seasons and nutrient processing dynamics may give <i>Phragmites</i> additional competitive 
                             advantages.
                         </div>
 
@@ -693,17 +642,17 @@
                             <div id="angle10" style="display: -webkit-inline-box;"><i class="fa fa-angle-right"></i></div>
                         </div>
                         <div class="faq-body" id="faq10body">
-                            Mapping identified large (>0.2 ha or 0.5 ac) patches dominated by Phragmites, not small stands or mixed communities that 
+                            Mapping identified large (>0.2 ha or 0.5 ac) patches dominated by <i>Phragmites</i>, not small stands or mixed communities that 
                             might exist early in an invasion. As such, distribution maps do not represent early detection tools in and of themselves, 
-                            and cannot take the place of monitoring efforts that may be capable of identifying and eradicating invasive Phragmites 
+                            and cannot take the place of monitoring efforts that may be capable of identifying and eradicating invasive <i>Phragmites</i> 
                             before it becomes well established. In addition, narrow linear features such as roadside ditches would not be identified 
                             in distribution maps, although these may have been present for years and may be important features as propagule sources 
                             and dispersion routes.
                             <br>
                             <br>
-                            In order to identify as much Phragmites as possible, mapping methods intentionally erred on the side of inclusion, so 
-                            areas falsely identified as occupied by Phragmites by mapping (errors of commission) are more frequent than areas with 
-                            Phragmites on the ground that were not identified by mapping (errors of omission).
+                            In order to identify as much <i>Phragmites</i> as possible, mapping methods intentionally erred on the side of inclusion, so 
+                            areas falsely identified as occupied by <i>Phragmites</i> by mapping (errors of commission) are more frequent than areas with 
+                            <i>Phragmites</i> on the ground that were not identified by mapping (errors of omission).
                             <br>
                             <br>
                             Habitat suitability modeling relies on the controls to distribution posed by environmental conditions rather than the 
@@ -717,7 +666,7 @@
                             Habitat suitability estimates were derived from point-specific samples of data sources with multiple original scales. 
                             A 100-m spacing of sample points was used to construct a spatially continuous grid surface that depicts the general 
                             relative suitability of an area based on environmental conditions. This methodology does not produce a spatially precise 
-                            determination of whether Phragmites will or will not be capable of colonizing discrete patches in the absence of control 
+                            determination of whether <i>Phragmites</i> will or will not be capable of colonizing discrete patches in the absence of control 
                             efforts.
                             <br>
                             <br>

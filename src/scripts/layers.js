@@ -8,6 +8,49 @@ var allLayers;
 
     allLayers = [
         {
+            "groupHeading": "Phragmites and Suitable Habitat",
+            "showGroupHeading": true,
+            "includeInLayerList": true,
+            "layers": {
+                "Phragmites stands > 0.2 ha":{
+                    "url" : "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "visibleLayers": [1],
+                    "options":{
+                        "id": "phragStands",
+                        // opacity is false because this layer is just being used to show no reduction (nothing for this group of layers)
+                        "opacity": 1,
+                        "minScale": 4622325,
+                        "visible": false
+                    },
+                    "wimOptions":{
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true,
+                        "moreinfo": "https://pubs.er.usgs.gov/publication/70048197",
+                    }
+                },
+                "Phragmites habitat suitability": {
+                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "visibleLayers": [29],
+                    "options": {
+                        "id": "habitatSuit",
+                        "opacity": 1,
+                        "visible": false
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true,
+                        "moreinfo": "https://pubs.er.usgs.gov/publication/70104177",
+                    }
+                }
+            }
+        },
+        {
             "groupHeading": "Study Area",
             "showGroupHeading": true,
             "includeInLayerList": true,
@@ -25,8 +68,7 @@ var allLayers;
                         "layerType": "agisFeature",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
-                        "includeLegend": true,
-                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
+                        "includeLegend": true
                     }
                 }
             }
@@ -36,7 +78,7 @@ var allLayers;
             "showGroupHeading": false,
             "includeInLayerList": true,
             "layers": {
-                "Within streams, wetlands, and water bodies" : {
+                "Surface waters" : {
                     "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [28],
                     "options": {
@@ -52,8 +94,7 @@ var allLayers;
                         "zoomScale": 144448,
                         "hasOpacitySlider": true,
                         "hasZoomto" : true,
-                        "includeLegend" : false,
-                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
+                        "includeLegend" : false
                     }
                 }
             }
@@ -76,7 +117,7 @@ var allLayers;
                         "type": "layer",
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
-                        "exclusiveGroupName": "distance",
+                        "exclusiveGroupName": "Distance",
                         /* "hasOpacitySlider": true, */
                         "includeLegend" : false
                     }
@@ -93,7 +134,7 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         /* "hasOpacitySlider": true, */
-                        "exclusiveGroupName": "distance",
+                        "exclusiveGroupName": "Distance",
                         "includeLegend" : false
                     }
                 },
@@ -125,51 +166,8 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true, 
                         /* "hasOpacitySlider": true, */
-                        "exclusiveGroupName": "distance",
+                        "exclusiveGroupName": "Distance",
                         "includeLegend" : false
-                    }
-                }
-            }
-        },
-        {
-            "groupHeading": "Phragmites and Suitable Habitat",
-            "showGroupHeading": true,
-            "includeInLayerList": true,
-            "layers": {
-                "Phragmites stands > 0.2 ha":{
-                    "url" : "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
-                    "visibleLayers": [1],
-                    "options":{
-                        "id": "phragStands",
-                        // opacity is false because this layer is just being used to show no reduction (nothing for this group of layers)
-                        "opacity": 1,
-                        "minScale": 4622325,
-                        "visible": false
-                    },
-                    "wimOptions":{
-                        "type": "layer",
-                        "layerType": "agisDynamic",
-                        "includeInLayerList": true,
-                        "hasOpacitySlider": true,
-                        "includeLegend" : true,
-                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
-                    }
-                },
-                "Phragmites habitat suitability": {
-                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
-                    "visibleLayers": [29],
-                    "options": {
-                        "id": "habitatSuit",
-                        "opacity": 1,
-                        "visible": false
-                    },
-                    "wimOptions": {
-                        "type": "layer",
-                        "layerType": "agisDynamic",
-                        "includeInLayerList": true,
-                        "hasOpacitySlider": true,
-                        "includeLegend" : true,
-                        "moreinfo": "https://water.usgs.gov/ogw/aquifer/principal/aquifrp025.xml",
                     }
                 }
             }
