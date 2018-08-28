@@ -29,7 +29,9 @@
     ],
 
     "languages": [
-      "javascript"
+      "javascript",
+      "html",
+      "css"
     ],
 
     "contact": {
