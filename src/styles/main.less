@@ -1,0 +1,1033 @@
+// Variables - colors, etc
+// For use within LESS
+@blue: #1D5FEE;
+@blue-dark: #1949D5;
+@blue-black: #050921;
+@blue-light: #3876FA;
+@black: #10152C;
+@teal: #3DC9D4;
+@white: #FFFFFF;
+@bg: #F9FAFE;
+@bg-dark: #EEF1FB;
+@border-color: fade(#A0AFCD, 40%);
+@text: #313B57;
+@text-light: #A0AFCD;
+@transition: 0.12s;
+
+
+// ==================================================
+// ==================================================
+// UNIVERSAL
+// ==================================================
+// ==================================================
+
+*{
+
+  &:focus,
+  &:active,
+  &:hover{
+    outline: none !important; 
+  }
+}
+// ==================================================
+// ==================================================
+// Top menu / Nav
+// ==================================================
+// ==================================================
+
+#top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: @black;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 0;
+  z-index: 1000;
+
+  .title{
+    flex-grow: 4;
+    display: flex;
+
+    // Usgs logo 
+    .top-menu-brand{
+      display: block;
+      box-sizing: border-box;
+      padding: 10px;
+
+      img{
+        max-height: 100%;
+        width: auto;
+        background-color: transparent;
+      }
+    }
+
+    .app-name,
+    .app-name-mobile{
+      font-size: 18px;
+      color: white;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-transform: capitalize;
+      padding-left: 10px;
+
+      @media (max-width: 500px) {
+        font-size: 14px;
+      }
+    }
+
+    .app-name-mobile{
+      display: none;
+    }
+  }
+
+  #mobile-main-menu{
+    display: none;
+
+    @media (max-width: 1020px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: @white;
+      font-size: 20px;
+      padding: 0 8px 5px 15px;
+    }
+  }
+
+  .top-menu-btn{
+    padding: 0 12px 2px 12px;
+    background-color: transparent;
+    border: none;
+    opacity: 0.8;
+
+    @media (max-width: 500px) {
+      padding: 0 10px 1px 10px;
+    }
+
+    i,
+    span{
+      font-size: 12px;
+      font-weight: 500;
+      color: white;
+    }
+    span{
+      padding-left: 6px;
+    }
+
+    &:hover{
+      cursor: pointer !important;
+      opacity: 1;
+
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+
+// ==================================================
+// ==================================================
+// Map
+// ==================================================
+// ==================================================
+
+#mapDiv{
+
+}
+html, body, #mapDiv {
+  padding: 0; 
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  padding-top: 70px;
+  padding-left:270px;
+}
+
+
+// Map Buttons
+// Map Buttons
+// Map Buttons
+#mapDiv_zoom_slider {
+  top: 80px !important;
+  left: 17px !important;
+  border-radius: 3px !important;
+  box-shadow: 0 1px 5px rgba(10,20,50,0.22) !important;
+  border: 0px solid black;
+
+  .esriSimpleSliderIncrementButton,
+  .esriSimpleSliderDecrementButton{
+    background-color: @white;
+    border-radius: 3px !important;
+
+    span{
+      color: @text;
+      font-size: 20px;
+    }
+
+    &:hover{
+      cursor: pointer;
+      
+      span{
+        color: @blue;
+      }
+    }
+  }
+}
+#homeButton,
+#locateButton {
+    position: fixed;
+    top: 95px !important;
+    left: 290px !important;
+    z-index: 50 !important;
+    background-color: @black !important;
+    border-radius: 3px !important;
+    box-shadow: 0 1px 5px rgba(10,20,50,0.22) !important;
+
+    &:hover{
+      background-color: @blue !important;
+    }
+
+    @media (max-width: 1020px) {
+      left: 8px !important;
+    }
+}
+#locateButton{
+  top: 130px !important;
+
+  .zoomLocateButton:hover{
+    background-color: transparent !important;
+  }
+}
+
+// Legend
+// Legend
+// Legend
+#legendElement{
+  width: 180px !important;
+  @media (max-width: 1020px) {
+    width: 140px !important;
+  }
+}
+#legendDiv{
+  font-size: 12px !important;
+}
+.legendClass {
+    position:absolute;
+    top: 75px !important;
+    right:5px;
+    z-index:3;
+    color: @black;
+    box-shadow: 0 1px 5px rgba(10,20,50,0.22) !important;
+    border-radius: 3px !important;
+
+    .legendHeading {
+      color: black;
+      background-color: rgba(255,255,255,0.8);
+      text-decoration: none !important;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 10px;
+      padding-left: 10px;
+      border-radius: 2px !important;
+
+
+      a{
+        color: @text;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        font-size: 11px;
+        width: 120px;
+
+        .glyphicon{
+          margin-right: 3px;
+          position: relative;
+          top: 1px;
+        }
+      }
+
+      &:hover{
+        border-radius: 2px !important;
+
+        a{
+          border-radius: 2px !important;
+        }
+      }
+  }
+
+}
+
+.latLngScale {
+    position:absolute;
+    padding:6px;
+    background-color: white !important;
+    box-shadow: 0 1px 5px rgba(10,20,50,0.12) !important;
+    bottom:1.6em;
+    left: 295px !important;
+    z-index:1;
+    color: @text;
+    border-radius: 2px !important;
+    letter-spacing: 0 !important;
+    font-size: 11px !important;
+    border: none !important;
+
+    @media (max-width: 1020px) {
+      left: 15px !important;
+    }
+}
+
+#logo {
+  height: 55px;
+  width: 160px;
+}
+
+
+// ==================================================
+// ==================================================
+// Sidebar
+// ==================================================
+// ==================================================
+
+#sidebar{
+  width: 280px;
+  height: 100%;
+  padding: 0;
+  padding-top: 55px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  max-height: 100%;
+
+  @media (max-width: 1020px) {
+    // width: 0px;
+    left: -100%;
+    position: absolute;
+    z-index: 500;
+    transition: 0.3s ease;
+    background-color: white !important;
+  }
+
+  // Sidebar footer
+  // Sidebar footer
+  // Sidebar footer
+  .footer-links{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 0;
+
+    .identification{
+      width: 100%;
+      padding: 0 0 3px 0;
+      opacity: 1;
+
+      a{
+        color: @text-light;
+        letter-spacing: 0.2;
+
+        &:hover{
+          cursor: pointer;
+          color: @text;
+        }
+      }
+    }
+
+    a{
+      font-size: 11px;
+      color: @text-light;
+      line-height: 18px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// sidebar open 
+.isOpenMenu #sidebar{
+  left: 0;
+  transition: 0.3s ease;
+}
+
+
+// ==================================================
+// ==================================================
+// Modals
+// ==================================================
+// ==================================================
+.modal{
+
+  .modal-dialog{
+    box-shadow: 0 1px 22px rgba(0,0,0, 0) !important;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+
+    .modal-content{
+      background-color: transparent;
+
+      .modal-header{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 10px 15px;
+
+        h4{
+          flex-grow: 3;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: @text;
+          font-size: 18px;
+          letter-spacing: -0.4px;
+          font-weight: 700;
+
+          small{
+            color: @text-light;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+          }
+        }
+        button{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          transition: @transition;
+          padding: 0;
+          font-size: 24px !important;
+
+          &:hover{
+            color: @text;
+            transition: @transition;
+            opacity: 1;
+          }
+        }
+
+      }
+      .modal-body{ 
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        color: @text;
+
+        p,ul,ol{
+          font-size: 13px;
+          letter-spacing: 0.2px;
+          color: @text;
+        }
+
+        .tab-pane{
+
+          h3{
+            font-size: 16px;
+            color: @text-light;
+            font-weight: 600;
+          }
+        }
+
+        .modal-footer-buttons{
+          display: flex;
+          justify-content: space-around;
+          box-sizing: border-box;
+          padding-top: 15px;
+
+          button{
+            background-color: @blue;
+            color: @white;
+            transition: @transition;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 3px;
+            box-shadow: 2px 0 12px fade(@black, 15%);
+
+            &:hover{
+              cursor: pointer;
+              background-color: @blue-dark;
+              transition: @transition;
+            }
+          }
+        }
+      }
+    }
+
+    hr{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+// Specific modal tweaks
+#aboutModalBody{
+  padding-bottom: 15px !important;
+}
+.search-provider{
+  font-size: 11px;
+  padding: 10px 0 20px 0;
+  text-align: center;
+}
+#dataModalButtons{
+  a{
+    width: 100%;
+    text-align: center;
+    min-width: 100%;
+    display: block;
+    border-top: 1px solid @border-color;
+
+    &:first-child{
+      border-top: none !important;
+    }
+
+    button{
+      width: 100%;
+      margin: 2px 0;
+      padding: 10px 0;
+      font-size: 13px;
+      font-weight: 500;
+      color: @black;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.faq-modal-body{
+  padding-top: 8px !important;
+
+  h4{
+    font-size: 16px;
+    color: @text-light;
+  }
+
+  .faq-header{
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 6px 10px;
+    color: @text;
+    font-weight: 600;
+
+    &:hover{
+      color: @blue;
+    }
+
+    .fa-angle-right{
+      font-weight: 900;
+      font-size: 16px;
+    }
+  }
+  .faq-body{
+    font-size: 11.5px;
+    line-height: 24px;
+    color: @text;
+    box-sizing: border-box;
+    padding: 5px 40px 40px 40px;
+  }
+}
+
+// User guide 
+#aboutModalBody{
+
+  .user-guide-header{
+    font-size: 16px;
+    color: @text-light;
+    font-weight: 600;
+  }
+
+  .user-guide-item{
+    background-color: @white;
+    border-bottom: 1px solid @border-color;
+    padding: 15px;
+
+    .user-guide-item-image{
+
+    }
+    p{
+      font-size: 12px;
+      color: @text;
+      line-height: 18px;
+      b{
+        font-size: 14px;
+        padding-bottom: 2px;
+        color: @black;
+      }
+    }
+  }
+}
+ /*
+    ===========================
+    ===========================
+         Main Menu
+    ===========================
+    ===========================
+*/
+
+.identification {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 9pt;
+    display: block;
+    padding:8px;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+    padding-left:8px;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+    padding-left:8px;
+}
+
+#main-menu {
+  width: 270px;
+  height: calc(100% - 70px);
+  float: left;
+  background-color: #20202f;
+  margin-top: 65px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  transition: left .5s ease;
+}
+
+#main-menu .main-menu-container {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.footer-links {
+  display: block;
+  box-sizing: border-box;
+  padding: 0px 5px 0px 5px;
+  line-height: 1.5em;
+  opacity: .75;
+  text-align: center;
+}
+
+.footer-links a {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0px 4px 0px 4px;
+  font-size: 10pt;
+}
+
+/************* END MAIN MENU **************/
+
+/************** All other stuff *********/
+
+
+
+@media (max-width: 767px) {
+
+  .app-name {
+    display: none;
+  }
+
+  .app-name-mobile {
+    display: inline;
+    font-size:small;
+  }
+
+}
+
+pre {
+  word-wrap: normal;
+  word-break: normal;
+}
+
+/************** All other stuff *********/
+
+#main-menu {
+  background-color: #ECEEF3;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 0 !important;
+}
+@media (max-width: 991px) {
+  #main-menu {
+    background-color: rgba(236, 238, 243, 0.8);
+  }
+}
+
+#main-menu .sidebar-panel {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border: none;
+}
+#main-menu .sidebar-panel .panel-heading {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+#main-menu .sidebar-panel .panel-heading h4 {
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: right;
+}
+#main-menu .sidebar-panel .panel-heading h4 a {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #6F758E;
+  background-color: #ECEEF3;
+}
+#main-menu .sidebar-panel .panel-heading h4 a:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+#main-menu .sidebar-panel .panel-heading h4 a:hover:after {
+  color: #000;
+}
+#main-menu .sidebar-panel .panel-heading h4 a:active {
+  background-color: rgba(69, 116, 204, 0.2);
+}
+#main-menu .panel-collapse {
+  background-color: #FFFFFF;
+}
+
+#main-menu .slick-btn {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #6F758E;
+  margin: 0 auto;
+  border-left: 4px solid transparent;
+}
+#main-menu .slick-btn img {
+  height: 25px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  border-radius: 0;
+  border: none;
+}
+#main-menu .slick-btn br {
+  display: none;
+}
+#main-menu .slick-btn:hover {
+  border-color: #333;
+  background-color: rgba(236, 238, 243, 0.5);
+}
+#main-menu .slick-btn:focus {
+  background-color: #ECEEF3;
+  border-color: #4574CC;
+}
+
+#main-menu .slick-btn-selection {
+  background-color: rgba(236, 238, 243, 0.5);
+  border-color: #4574CC !important;
+}
+
+/* User Guide */
+
+.user-guide-header{
+    display: block;
+    text-align: center;
+    font-size: 16pt;
+    box-sizing: border-box;
+    padding: 10px 0 25px 0;
+}
+
+.user-guide-item{
+    display: block;
+    box-sizing: border-box;
+    padding: 35px 15px 35px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.user-guide-item:nth-child(even){
+    background-color: rgba(0,0,0,0.04);
+}
+
+.user-guide-item .user-guide-item-image{
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+}
+.user-guide-item img{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    border: 4px solid rgba(0,0,0,0.15);
+}
+.user-guide-item p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 2;
+    padding-left: 15px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+    font-size: 12pt;
+}
+.user-guide-item p b{
+    color: rgba(0,0,0,0.6);
+    display: block;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+#closeModalButton{
+  box-sizing: border-box; 
+  padding: 0 25px 35px;  
+}
+
+
+/*Frequently Asked Questions*/
+.faq-modal-body{
+    display: block;
+    box-sizing: border-box;
+    padding: 30px 25px;
+
+    
+}
+.faq-header{
+    display: block;
+    font-size: 12pt;
+    margin-bottom: 8px;
+    background-color: #F5F5F5;
+    color: #555555;
+    box-sizing: border-box;
+    transition: 0.12s;
+    padding: 10px;
+}
+
+.faq-header i{
+    margin-left: 10px;
+}
+.faq-header:hover{
+    cursor: pointer;
+    color: #6184DB;
+    transition: 0.12s;
+}
+
+.faq-body{
+    display: none;
+    line-height: 1.6em;
+    color: #555555;
+    font-size: 10.35pt;
+    box-sizing: border-box;
+    padding: 10px 10px;
+
+}
+.faq-body img{
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+
+/* Hiding 'Powered by ESRI' logo */
+.map .logo-med {
+  display: none;
+}
+
+/* Hiding 'Powered by ESRI' logo */
+.map .logo-med {
+  display: none;
+}
+
+
+
+.esri-leaflet-logo leaflet-control {
+    display: none;
+}
+
+/* Styling Home Button */
+.leaflet-control-defaultextent-toggle {
+  text-indent: -9999px;
+  white-space: nowrap;
+  background-image: url('../images/home.png');
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.leaflet-left {
+  left: 275px;
+  top: 75px;
+}
+
+/* Rotating FAQ arrows when clicked */
+
+#angle1 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle2 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle3 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle4 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle5 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle6 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle7 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle8 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle9 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+#angle10 {
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+/* Rotates arrows for Basemap and Map Layers in sidebar */
+.panel-heading .accordion-toggle:after {
+  /* symbol for "opening" panels */
+  font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+  content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+  float: right;        /* adjust as needed */
+  color: grey;         /* adjust as needed */
+  padding: 0 0 0 10px;
+  font-weight: 100;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+/*Custom CSS */
+
+.distanceSelect {
+  width: 175px;
+}
+
+#grouphead {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6F758E;
+  font-size: 10pt;
+  text-transform: capitalize;
+  border-bottom: 1px solid #ECEEF3;
+  display: block;
+  box-sizing: border-box;
+  padding: 12px 5px 5px 12px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* hiding esri service layer label in legend */
+.esriLegendLayerLabel {
+  display: none;
+}
+
+#legendDiv_msg {
+  display: none;
+}
+
+/* styling the legend images */
+.legendImage {
+  display: block;
+}
+
+#distanceLegend {
+  font-weight: bold; 
+}
+
+#waterLegend {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.customLegendBody {
+  padding: 0px 15px 15px 15px;
+}
+
+/* Styles for overview map */
+
+@media (max-width: 1000px) {
+  .esriOverviewMap {
+    display: none;
+  }
+}
+
+.esriOverviewMap .ovwButton{
+ padding: 10px; 
+} /* pads minimize arrow */
+
+.ovwContainer {
+  width: 250px;
+  height: 150px;
+  display: block;
+  margin: 15px;
+  bottom: 0px;
+  right: 0px;
+  padding: 2px;
+  border: 2px solid rgb(2, 5, 172);
+}
+
+/* .esriOverviewMap.ovwBR .ovwContainer {
+ 
+} */
+
+.esriControlsBR {
+  display: none;
+} /* hides esri attribution for basemap in bottom right of screen */
+
+.opacity {
+  padding-left: 10px;
+}
+
+.opacitySlider {
+  position: absolute;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  /*padding-bottom: 40px;*/
+  opacity: 0.8;
+  border: solid 1px white;
+  background-color: black;
+  z-index: 1000;
+  border-radius: 5px;
+}
