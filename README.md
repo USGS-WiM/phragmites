@@ -1,4 +1,4 @@
-![WiM](wimlogo.png)
+![WIM](wimlogo.png)
 
 
 # Phragmites

@@ -234,6 +234,7 @@ gulp.task('bs', function(){
     });  
  
     gulp.watch("./src/**/*.less", ['sync-styles']);
+    //gulp.watch("./src/**/*.css", ['sync-styles']);
  
     gulp.watch("./src/**/*.html").on("change", reload);
     gulp.watch("./src/**/*.js").on("change", reload);

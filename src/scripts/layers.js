@@ -1,6 +1,6 @@
 
 var app = {};
-app.version = '0.0.0';
+app.version = '2.0.0';
 app.mapX = '-97.0';
 app.mapY = '40.0';
 app.zoomLevel = 4;
@@ -150,7 +150,7 @@ var allLayers;
                         "layerType": "agisDynamic",
                         "includeInLayerList": true,
                         /* "hasOpacitySlider": true, */
-                        "exclusiveGroupName": "distance",
+                        "exclusiveGroupName": "Distance",
                         "includeLegend" : false
                     }
                 },

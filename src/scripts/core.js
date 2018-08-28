@@ -421,9 +421,9 @@ require([
                     //create radio button
                     //var button = $('<input type="radio" name="' + camelize(exclusiveGroupName) + '" value="' + camelize(layerName) + '"checked>' + layerName + '</input></br>');
                     if (layer.visible) {
-                        var button = $('<div id="' + camelize(layerName) + '" class="btn-group-vertical lyrTog radioTog" style="cursor: pointer;" data-toggle="buttons"> <label class="btn btn-default"  style="font-weight: bold;text-align: left"> <input type="radio" name="' + camelize(exclusiveGroupName) + '" autocomplete="off"><i class="glyphspan fa fa-dot-circle-o ' + camelize(exclusiveGroupName) + '"></i>&nbsp;&nbsp;' + layerName + '</label> </div>');
+                        var button = $('<div id="' + camelize(layerName) + '" class="btn-group-vertical lyrTog radioTog" style="cursor: pointer;" data-toggle="buttons"> <label class="btn btn-default"  style="text-align: left"> <input type="radio" name="' + camelize(exclusiveGroupName) + '" autocomplete="off"><i class="glyphspan fa fa-dot-circle-o ' + camelize(exclusiveGroupName) + '"></i>&nbsp;&nbsp;' + layerName + '</label> </div>');
                     } else {
-                        var button = $('<div id="' + camelize(layerName) + '" class="btn-group-vertical lyrTog radioTog" style="cursor: pointer;" data-toggle="buttons"> <label class="btn btn-default"  style="font-weight: bold;text-align: left"> <input type="radio" name="' + camelize(exclusiveGroupName) + '" autocomplete="off"><i class="glyphspan fa fa-circle-o ' + camelize(exclusiveGroupName) + '"></i>&nbsp;&nbsp;' + layerName + '</label> </div>');
+                        var button = $('<div id="' + camelize(layerName) + '" class="btn-group-vertical lyrTog radioTog" style="cursor: pointer;" data-toggle="buttons"> <label class="btn btn-default"  style="text-align: left"> <input type="radio" name="' + camelize(exclusiveGroupName) + '" autocomplete="off"><i class="glyphspan fa fa-circle-o ' + camelize(exclusiveGroupName) + '"></i>&nbsp;&nbsp;' + layerName + '</label> </div>');
                     }
 
                     $('#' + camelize(exclusiveGroupName)).append(button);
@@ -533,7 +533,7 @@ require([
                             layer.setVisibility(true);
 
                             if (layer.id == "water"){
-                                $('#waterLegend').html("Within streams, wetlands,"+ '<br>' + "and water bodies" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />');
+                                $('#waterLegend').html("Surface waters"+ '<br>' + '<img class="legendImage" src="images/contour_1m_legend.jpg" />');
 
                             }
                         }       
@@ -699,6 +699,14 @@ require([
                 /* $("#countour-Base1mReduction").click(function (){
                     $('#lidarOne').append("Lidar-based 1m reduction" + '<img class="legendImage" src="images/contour_1m_legend.jpg" />' + "Lidar Availability" + '<img class="legendImage" src="images/lidar_availability.jpg" />');
                 }); */
+                $('#userguideLink').click(function () {
+                    $('#userGuideButton').trigger('click');
+                    $('#aboutModal').modal('hide');
+                });
+                $('#faqLink').click(function () {
+                    $('#faqButton').trigger('click');
+                    $('#aboutModal').modal('hide');
+                });
 
             });
 

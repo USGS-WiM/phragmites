@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="author" content="USGS WiM">
+    <meta name="author" content="USGS WIM">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="copyright" href="license.txt">
     <link rel="shortcut icon" id="favicon" type="image/ico" href="images/favicon-dark.png" />
@@ -15,23 +15,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/7f01eb2758.js"></script>
 
-    
-
-    
     <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
     <script src="https://js.arcgis.com/3.20/"></script>
-    
 
     <!-- USGS Search -->
     <script type="text/javascript" src="https://txpub.usgs.gov/DSS/search_api/2.1/api/search_api.min.js"></script>
-
-
     
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    
-
-    
     
     <!-- endbuild -->
 
@@ -82,7 +73,7 @@
                 
         <div class="title">
             <a class='top-menu-brand' href="https://www.usgs.gov"><img id="logo" src="images/usgs_logo.png"></a>
-            <span class="app-name"><i>Phragmites</i> Decision Support Tool</span> <span class="app-name-mobile">Phragmites</span>
+            <span class="app-name"><span style="font-style: italic;">Phragmites</span> &nbsp;Decision Support Tool</span> <span class="app-name-mobile">Phragmites</span>
         </div>
 
         <button id="geosearchButton" type="button" class="btn btn-default top-menu-btn pull-right" >
@@ -107,7 +98,7 @@
 
     </div>
 
-    <div id="sidebar" class="col-xs-11 col-sm-10 col-md-3 col-lg-2 sidebar sidebar-left sidebar-animate sidebar-md-show no-col-padding">
+    <div id="sidebar" style="overflow: hidden;" class="col-xs-11 col-sm-10 col-md-3 col-lg-2 sidebar sidebar-left sidebar-animate sidebar-md-show no-col-padding">
         
 
         <!-- <div class="panel panel-default wim-sidebar-panel">
@@ -202,9 +193,9 @@
                                 <li>A map of estimated <i>Phragmites</i> habitat suitability based on current environmental conditions.</li>
                                 <li>Corridor networks including reduced lake-level scenarios that are weighted by proximity to existing <i>Phragmites</i> to show likely invasion pathways.</li>
                             </ol>
-                            <p>Please explore the mapper or see our <a href=# target="_blank">User Guide</a> and <a href="#" target="_blank">FAQ</a> for a depiction of the various features.</p>
+                            <p>Please explore the mapper or see our <a id="userguideLink" style="cursor: pointer;">User Guide</a> and <a id="faqLink" style="cursor: pointer;">FAQ</a> for a depiction of the various features.</p>
                             <hr>
-                            <p>Developed by <a href="https://wim.usgs.gov" target="_blank">Web Informatics and Mapping (WiM)</a></p>
+                            <p>Developed by <a href="https://wim.usgs.gov" target="_blank">Web Informatics and Mapping (WIM)</a></p>
                             <span id="appVersion"></span>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="referencesTabPane">
