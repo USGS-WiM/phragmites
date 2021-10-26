@@ -3,7 +3,7 @@
     "name": "phragmites",
     "organization": "U.S. Geological Survey",
     "description": "",
-    "version": "v2.0.0",
+    "version": "v2.0.1",
     "status": ["Production"],
 
     "permissions": {
