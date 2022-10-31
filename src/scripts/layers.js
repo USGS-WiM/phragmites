@@ -13,7 +13,7 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "Phragmites stands > 0.2 ha":{
-                    "url" : "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "url" : "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [1],
                     "options":{
                         "id": "phragStands",
@@ -32,7 +32,7 @@ var allLayers;
                     }
                 },
                 "Phragmites habitat suitability": {
-                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "url": "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [29],
                     "options": {
                         "id": "habitatSuit",
@@ -56,7 +56,7 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "Study Area": {
-                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/2",
+                    "url": "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/2",
                     "options": {
                         "type": "layer",
                         "id": "studyArea",
@@ -79,7 +79,7 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "Surface waters" : {
-                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "url": "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [28],
                     "options": {
                         "id": "water",
@@ -105,7 +105,7 @@ var allLayers;
             "includeInLayerList": true,
             "layers": {
                 "No Reduction":{
-                    "url" : "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "url" : "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [23],
                     "options":{
                         "id": "none",
@@ -123,7 +123,7 @@ var allLayers;
                     }
                 },
                 "Contour-base 1m reduction": { 
-                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "url": "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [27],
                     "options": {
                         "id": "1m",
@@ -139,7 +139,7 @@ var allLayers;
                     }
                 },
                 "Lidar-based 1m reduction": {
-                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "url": "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [9, 5],
                     "options": {
                         "id": "lidar1m",
@@ -155,7 +155,7 @@ var allLayers;
                     }
                 },
                 "Lidar-based 50cm reduction": {
-                    "url": "https://gis.wim.usgs.gov/arcgis/rest/services/GLRI68/Phragmites/MapServer/",
+                    "url": "https://gis1.wim.usgs.gov/server/rest/services/GLRI68/Phragmites/MapServer/",
                     "visibleLayers": [7, 5],
                     "options": {
                         "id": "lidar50cm",
