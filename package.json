@@ -1,6 +1,6 @@
 {
   "name": "phragmites",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Web Informatics and Mapping generated mapping application",
   "scripts": {
     "build": "gulp build",
